@@ -34,7 +34,7 @@
   /* ── ヘッダー帯 ── */
   .header {
     background: var(--navy);
-    padding: 10mm 12mm 8mm;
+    padding: 6mm 12mm 4mm;
     position: relative;
     overflow: hidden;
   }
@@ -89,7 +89,7 @@
     color: var(--white);
     line-height: 1.15;
     letter-spacing: 0.02em;
-    margin-bottom: 3mm;
+    margin-bottom: 1mm;
   }
   .main-title-sub {
     font-size: 26pt;
@@ -112,7 +112,7 @@
   /* ── 日時・場所バナー ── */
   .info-banner {
     background: var(--teal);
-    padding: 4mm 12mm;
+    padding: 2.5mm 12mm;
     display: flex;
     align-items: center;
     gap: 8mm;
@@ -142,7 +142,7 @@
   .info-detail {
     font-size: 11.5pt;
     color: rgba(255,255,255,0.9);
-    line-height: 1.9;
+    line-height: 1.5;
     font-weight: 400;
   }
   .info-detail strong {
@@ -187,7 +187,7 @@
   .organizer-band {
     background: var(--white);
     border-bottom: 0.5mm solid var(--lightgray);
-    padding: 3mm 12mm;
+    padding: 1.5mm 12mm;
     display: flex;
     align-items: center;
     gap: 6mm;
@@ -203,7 +203,7 @@
   /* ── テーマ帯 ── */
   .theme-band {
     background: var(--offwhite);
-    padding: 5mm 12mm;
+    padding: 2.5mm 12mm;
     border-left: 3mm solid var(--purple);
     margin: 0;
   }
@@ -231,10 +231,10 @@
 
   /* ── 本体 ── */
   .body-wrap {
-    padding: 7mm 12mm;
+    padding: 3mm 12mm;
     display: grid;
     grid-template-columns: 1fr 72mm;
-    gap: 7mm;
+    gap: 5mm;
   }
 
   /* ── プログラム ── */
@@ -244,7 +244,7 @@
     letter-spacing: 0.2em;
     color: var(--navy);
     font-family: 'Space Mono', monospace;
-    margin-bottom: 4mm;
+    margin-bottom: 2mm;
     display: flex;
     align-items: center;
     gap: 2mm;
@@ -256,12 +256,12 @@
     background: var(--lightgray);
   }
 
-  .program-list { display: flex; flex-direction: column; gap: 3mm; }
+  .program-list { display: flex; flex-direction: column; gap: 1.5mm; }
 
   .program-item {
     display: grid;
     grid-template-columns: 20mm 1fr;
-    gap: 3mm;
+    gap: 1.5mm;
     align-items: start;
   }
   .prog-time {
@@ -274,7 +274,7 @@
   .prog-content {
     border-left: 2px solid var(--lightgray);
     padding-left: 3mm;
-    padding-bottom: 2mm;
+    padding-bottom: 0.5mm;
   }
   .prog-content.lecture-1 { border-color: var(--purple); }
   .prog-content.lecture-2 { border-color: var(--coral); }
@@ -310,8 +310,8 @@
   .prog-affil {
     font-size: 12.5pt;
     color: var(--gray);
-    line-height: 1.5;
-    margin-bottom: 2mm;
+    line-height: 1.4;
+    margin-bottom: 0.5mm;
   }
   .prog-topic {
     font-size: 11.5pt;
@@ -331,13 +331,13 @@
   }
 
   /* ── 右サイドバー ── */
-  .sidebar { display: flex; flex-direction: column; gap: 5mm; }
+  .sidebar { display: flex; flex-direction: column; gap: 3mm; }
 
   /* 参加情報 */
   .info-card {
     background: var(--navy);
     border-radius: 3mm;
-    padding: 5mm;
+    padding: 3mm;
     color: var(--white);
   }
   .info-card-title {
@@ -345,7 +345,7 @@
     letter-spacing: 0.2em;
     font-family: 'Space Mono', monospace;
     color: var(--teal);
-    margin-bottom: 3.5mm;
+    margin-bottom: 2mm;
   }
   .info-row {
     display: flex;
@@ -390,21 +390,21 @@
   .axes-card {
     background: var(--offwhite);
     border-radius: 3mm;
-    padding: 5mm;
+    padding: 3mm;
   }
   .axes-card-title {
     font-size: 12.5pt;
     letter-spacing: 0.2em;
     font-family: 'Space Mono', monospace;
     color: var(--navy);
-    margin-bottom: 3.5mm;
+    margin-bottom: 2mm;
   }
   .axis-item {
     display: flex;
     gap: 2.5mm;
     align-items: flex-start;
-    margin-bottom: 3mm;
-    padding-bottom: 3mm;
+    margin-bottom: 1.5mm;
+    padding-bottom: 1.5mm;
     border-bottom: 0.3mm solid var(--lightgray);
   }
   .axis-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
@@ -441,7 +441,7 @@
     margin-top: auto;
     background: var(--offwhite);
     border-top: 0.3mm solid var(--lightgray);
-    padding: 2mm 12mm;
+    padding: 1mm 12mm;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -449,14 +449,14 @@
   .footer-left {
     font-size: 12.5pt;
     color: var(--gray);
-    line-height: 1.7;
+    line-height: 1.4;
   }
   .footer-left strong { color: var(--navy); }
   .footer-right {
     text-align: right;
     font-size: 12.5pt;
     color: var(--gray);
-    line-height: 1.7;
+    line-height: 1.4;
   }
   .footer-logo {
     font-family: 'Noto Sans JP', sans-serif;
@@ -470,7 +470,7 @@
   /* ── 参加費・情報バンド ── */
   .fee-band {
     background: var(--navy);
-    padding: 3mm 12mm;
+    padding: 2mm 12mm;
     display: flex;
     align-items: center;
     gap: 8mm;
@@ -537,7 +537,7 @@
   .info-footer {
     background: var(--offwhite);
     border-top: 0.3mm solid var(--lightgray);
-    padding: 4mm 12mm;
+    padding: 1mm 12mm;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 5mm;
