@@ -39,18 +39,10 @@
     overflow: hidden;
   }
   .header::before {
-    content: '';
-    position: absolute;
-    top: 0; right: 0;
-    width: 60mm; height: 100%;
-    background: linear-gradient(135deg, transparent 40%, rgba(13,138,114,0.25) 100%);
+    content: none;
   }
   .header::after {
-    content: '';
-    position: absolute;
-    bottom: 0; left: 0;
-    width: 100%; height: 1.5mm;
-    background: linear-gradient(90deg, var(--teal), var(--purple), var(--coral));
+    content: none;
   }
 
   .header-top {
@@ -61,7 +53,7 @@
   }
   .seminar-label {
     font-family: 'Space Mono', monospace;
-    font-size: 8pt;
+    font-size: 11.5pt;
     color: rgba(255,255,255,0.45);
     letter-spacing: 0.2em;
     line-height: 1.6;
@@ -80,13 +72,13 @@
     text-align: right;
   }
   .organizer-main {
-    font-size: 7.5pt;
+    font-size: 12.5pt;
     color: rgba(255,255,255,0.7);
     line-height: 1.7;
   }
   .organizer-main span {
     color: rgba(255,255,255,0.45);
-    font-size: 6.5pt;
+    font-size: 11.5pt;
     display: block;
   }
 
@@ -138,7 +130,7 @@
     line-height: 1;
   }
   .date-label {
-    font-size: 10pt;
+    font-size: 11.5pt;
     color: rgba(255,255,255,0.8);
     font-weight: 300;
   }
@@ -148,7 +140,7 @@
     background: rgba(255,255,255,0.35);
   }
   .info-detail {
-    font-size: 10pt;
+    font-size: 11.5pt;
     color: rgba(255,255,255,0.9);
     line-height: 1.9;
     font-weight: 400;
@@ -173,7 +165,7 @@
     gap: 3mm;
   }
   .org-role {
-    font-size: 9pt;
+    font-size: 12.5pt;
     font-family: 'Space Mono', monospace;
     color: var(--teal);
     letter-spacing: 0.1em;
@@ -181,13 +173,13 @@
     white-space: nowrap;
   }
   .org-name {
-    font-size: 9pt;
+    font-size: 12.5pt;
     color: var(--navy);
     font-weight: 500;
     letter-spacing: 0.03em;
   }
   .org-sep {
-    font-size: 9pt;
+    font-size: 12.5pt;
     color: var(--lightgray);
   }
 
@@ -202,11 +194,11 @@
   }
   .org-item { display: flex; align-items: baseline; gap: 3mm; }
   .org-role {
-    font-size: 9pt; font-family: 'Space Mono', monospace;
+    font-size: 12.5pt; font-family: 'Space Mono', monospace;
     color: var(--teal); letter-spacing: 0.1em; font-weight: 700; white-space: nowrap;
   }
-  .org-name { font-size: 11pt; color: var(--navy); font-weight: 500; letter-spacing: 0.03em; }
-  .org-sep  { font-size: 9pt; color: var(--lightgray); }
+  .org-name { font-size: 12.5pt; color: var(--navy); font-weight: 500; letter-spacing: 0.03em; }
+  .org-sep  { font-size: 12.5pt; color: var(--lightgray); }
 
   /* ── テーマ帯 ── */
   .theme-band {
@@ -216,7 +208,7 @@
     margin: 0;
   }
   .theme-label {
-    font-size: 7pt;
+    font-size: 12.5pt;
     color: var(--purple);
     letter-spacing: 0.2em;
     font-family: 'Space Mono', monospace;
@@ -248,7 +240,7 @@
   /* ── プログラム ── */
   .program-section { }
   .section-title {
-    font-size: 9pt;
+    font-size: 12.5pt;
     letter-spacing: 0.2em;
     color: var(--gray);
     font-family: 'Space Mono', monospace;
@@ -274,7 +266,7 @@
   }
   .prog-time {
     font-family: 'Space Mono', monospace;
-    font-size: 9pt;
+    font-size: 12.5pt;
     color: var(--gray);
     padding-top: 1mm;
     line-height: 1.4;
@@ -292,7 +284,7 @@
   .prog-content.event     { border-color: var(--lightgray); }
 
   .prog-tag {
-    font-size: 7.5pt;
+    font-size: 12.5pt;
     font-family: 'Space Mono', monospace;
     letter-spacing: 0.1em;
     padding: 0.5mm 2mm;
@@ -309,20 +301,20 @@
   .tag-opening   { background: var(--lightgray); color: var(--gray); }
 
   .prog-speaker {
-    font-size: 12pt;
+    font-size: 15pt;
     font-weight: 700;
     color: var(--navy);
     line-height: 1.3;
     margin-bottom: 0.8mm;
   }
   .prog-affil {
-    font-size: 9pt;
+    font-size: 12.5pt;
     color: var(--gray);
     line-height: 1.5;
     margin-bottom: 2mm;
   }
   .prog-topic {
-    font-size: 8pt;
+    font-size: 11.5pt;
     color: var(--navy);
     line-height: 1.5;
     font-weight: 400;
@@ -333,7 +325,7 @@
     font-weight: 500;
   }
   .prog-simple {
-    font-size: 10pt;
+    font-size: 11.5pt;
     color: var(--gray);
     line-height: 1.5;
   }
@@ -349,7 +341,7 @@
     color: var(--white);
   }
   .info-card-title {
-    font-size: 9pt;
+    font-size: 12.5pt;
     letter-spacing: 0.2em;
     font-family: 'Space Mono', monospace;
     color: var(--teal);
@@ -362,7 +354,7 @@
     margin-bottom: 3mm;
   }
   .info-icon {
-    font-size: 8pt;
+    font-size: 11.5pt;
     color: var(--teal);
     width: 4mm;
     flex-shrink: 0;
@@ -370,14 +362,14 @@
   }
   .info-row-content { flex: 1; }
   .info-row-label {
-    font-size: 8pt;
+    font-size: 11.5pt;
     color: rgba(255,255,255,0.45);
     letter-spacing: 0.1em;
     margin-bottom: 0.8mm;
     font-family: 'Space Mono', monospace;
   }
   .info-row-value {
-    font-size: 10pt;
+    font-size: 11.5pt;
     color: var(--white);
     line-height: 1.6;
     font-weight: 400;
@@ -385,7 +377,7 @@
   .info-row-value strong { color: #A0D8CE; font-weight: 700; }
   .hybrid-badge {
     display: inline-block;
-    font-size: 8pt;
+    font-size: 11.5pt;
     background: rgba(13,138,114,0.3);
     color: var(--teal);
     padding: 0.5mm 2mm;
@@ -401,7 +393,7 @@
     padding: 5mm;
   }
   .axes-card-title {
-    font-size: 9pt;
+    font-size: 12.5pt;
     letter-spacing: 0.2em;
     font-family: 'Space Mono', monospace;
     color: var(--gray);
@@ -431,13 +423,13 @@
   .axis-num.c3 { color: var(--coral); }
   .axis-body {}
   .axis-label {
-    font-size: 10pt;
+    font-size: 11.5pt;
     font-weight: 700;
     color: var(--navy);
     margin-bottom: 0.8mm;
   }
   .axis-desc {
-    font-size: 9pt;
+    font-size: 12.5pt;
     color: var(--gray);
     line-height: 1.55;
   }
@@ -455,14 +447,14 @@
     align-items: center;
   }
   .footer-left {
-    font-size: 9pt;
+    font-size: 12.5pt;
     color: var(--gray);
     line-height: 1.7;
   }
   .footer-left strong { color: var(--navy); }
   .footer-right {
     text-align: right;
-    font-size: 9pt;
+    font-size: 12.5pt;
     color: var(--gray);
     line-height: 1.7;
   }
@@ -489,7 +481,7 @@
     gap: 3mm;
   }
   .fee-label {
-    font-size: 9pt;
+    font-size: 12.5pt;
     font-family: 'Space Mono', monospace;
     color: var(--teal);
     letter-spacing: 0.1em;
@@ -512,7 +504,7 @@
     gap: 3mm;
   }
   .fee-sub-label {
-    font-size: 8.5pt;
+    font-size: 12pt;
     font-family: 'Space Mono', monospace;
     color: rgba(255,255,255,0.6);
     letter-spacing: 0.05em;
@@ -520,20 +512,20 @@
     min-width: 14mm;
   }
   .fee-sub-value {
-    font-size: 11pt;
+    font-size: 12.5pt;
     color: var(--white);
     font-weight: 500;
   }
   .fee-sub-value em {
     font-style: normal;
     color: rgba(255,255,255,0.55);
-    font-size: 9pt;
+    font-size: 12.5pt;
     font-weight: 400;
   }
   .fee-value em {
     font-style: normal;
     color: rgba(255,255,255,0.55);
-    font-size: 9pt;
+    font-size: 12.5pt;
   }
   .fee-divider {
     width: 0.3mm;
@@ -552,7 +544,7 @@
   }
   .info-footer-block { }
   .info-footer-label {
-    font-size: 8.5pt;
+    font-size: 12pt;
     font-family: 'Space Mono', monospace;
     color: var(--teal);
     letter-spacing: 0.15em;
@@ -560,7 +552,7 @@
     font-weight: 700;
   }
   .info-footer-text {
-    font-size: 9pt;
+    font-size: 12.5pt;
     color: var(--gray);
     line-height: 1.8;
   }
@@ -569,10 +561,10 @@
     text-decoration: none;
     font-weight: 500;
     word-break: break-all;
-    font-size: 8.5pt;
+    font-size: 12pt;
   }
   .info-footer-note {
-    font-size: 8pt;
+    font-size: 11.5pt;
     color: var(--gray);
     margin-top: 1mm;
     opacity: 0.7;
@@ -594,6 +586,11 @@
 
 <!-- ヘッダー -->
 <div class="header">
+  <!-- 右上装飾SVG（印刷対応） -->
+  <svg style="position:absolute;top:0;right:0;width:60mm;height:100%;display:block;" viewBox="0 0 170 120" preserveAspectRatio="xMaxYMin meet" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="170,0 170,120 50,0" fill="#0D8A72" opacity="0.22"/>
+    <polygon points="170,0 170,60 110,0" fill="#0D8A72" opacity="0.18"/>
+  </svg>
   <div class="header-top">
     <div>
       <div class="seminar-label">KURAMAE KAGAKU GIJUTSU SEMINAR</div>
@@ -605,6 +602,7 @@
     行動認識　<span class="main-title-sub">～人の動きを理解するAI～</span>
   </div>
   <div class="sub-title">東京科学大学が育むフィジカルAIの最前線</div>
+  <div style="position:absolute;bottom:0;left:0;width:100%;height:1.5mm;background:linear-gradient(90deg,#0D8A72,#4A3FB5,#D85A30);"></div>
 </div>
 
 <!-- 主催・共催バンド -->
@@ -719,7 +717,7 @@
         <div class="prog-content panel">
           <span class="prog-tag tag-panel">PANEL</span>
           <div class="prog-speaker">パネルディスカッション</div>
-          <div class="prog-affil">講師4名による</div>
+          <div class="prog-affil">講師4名による「フィジカルAI」社会実装への展望（仮）</div>
 
         </div>
       </div>
@@ -797,7 +795,7 @@
         <div class="axis-num c3">03</div>
         <div class="axis-body">
           <div class="axis-label">社会への実装</div>
-          <div class="axis-desc">若狭 氏（卒業生）<br>AI警備・産学連携から社会実装へ</div>
+          <div class="axis-desc">若狭 氏（卒業生）<br>AI警備システム・産学連携から社会実装へ</div>
         </div>
       </div>
     </div>
