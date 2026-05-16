@@ -22,7 +22,11 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
   /* A3縦 = 297mm × 420mm */
-  body {
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+    body {
     width: 297mm;
     min-height: 420mm;
     position: relative;
@@ -30,6 +34,7 @@
     font-family: 'Noto Sans JP', sans-serif;
     color: var(--navy);
     overflow-x: hidden;
+    zoom: 0.7071;
   }
 
   /* ── ヘッダー帯 ── */
