@@ -1185,12 +1185,15 @@
 <script>
 (function () {
   function applyZoom() {
-    // zoom:1 で自然幅を計測してからスケールを決定
-    document.body.style.zoom = '1';
-    var bodyW = document.body.scrollWidth;
+    // body の overflow-x:hidden の影響を受けずに 297mm を CSS px で正確に計測
+    var ref = document.createElement('div');
+    ref.style.cssText = 'position:fixed;top:-9999px;left:0;width:297mm;height:0;';
+    document.documentElement.appendChild(ref);
+    var designW = ref.getBoundingClientRect().width;
+    document.documentElement.removeChild(ref);
+
     var vw = window.innerWidth;
-    // モバイルは画面幅いっぱい、デスクトップは最大 A4 サイズ (0.7071)
-    var scale = Math.min(vw / bodyW, 0.7071);
+    var scale = Math.min(vw / designW, 0.7071);
     document.body.style.zoom = scale.toString();
   }
   if (document.readyState === 'loading') {
