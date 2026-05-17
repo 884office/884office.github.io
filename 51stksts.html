@@ -35,6 +35,7 @@
     color: var(--navy);
     overflow-x: hidden;
     zoom: 0.7071;
+    transform-origin: top left;
   }
 
   /* ── ヘッダー帯 ── */
@@ -1181,5 +1182,33 @@
 
 </div>
 
+<script>
+(function () {
+  function applyZoom() {
+    // Reset to measure natural layout width
+    document.body.style.zoom = '';
+    document.body.style.transform = '';
+    var bodyW = document.body.scrollWidth;
+    var vw = window.innerWidth;
+    var scale = Math.min(vw / bodyW, 0.7071);
+    // Use transform on iOS where zoom behaves inconsistently
+    var isIOS = /iP(hone|ad|od)/.test(navigator.userAgent);
+    if (isIOS) {
+      document.body.style.zoom = '';
+      document.body.style.transform = 'scale(' + scale + ')';
+      document.documentElement.style.height = Math.ceil(document.body.scrollHeight * scale) + 'px';
+    } else {
+      document.body.style.transform = '';
+      document.body.style.zoom = scale;
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', applyZoom);
+  } else {
+    applyZoom();
+  }
+  window.addEventListener('resize', applyZoom);
+})();
+</script>
 </body>
 </html>
