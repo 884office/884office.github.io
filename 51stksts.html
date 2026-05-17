@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=1122">
 <title>第51回蔵前科学技術セミナー ポスター</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Space+Mono:wght@400;700&display=swap');
@@ -35,7 +35,10 @@
     color: var(--navy);
     overflow-x: hidden;
     zoom: 0.7071;
-    transform-origin: top left;
+    margin: 0 auto;
+  }
+  @media screen and (max-width: 1122px) {
+    body { zoom: 1; }
   }
 
   /* ── ヘッダー帯 ── */
@@ -1182,27 +1185,5 @@
 
 </div>
 
-<script>
-(function () {
-  function applyZoom() {
-    // body の overflow-x:hidden の影響を受けずに 297mm を CSS px で正確に計測
-    var ref = document.createElement('div');
-    ref.style.cssText = 'position:fixed;top:-9999px;left:0;width:297mm;height:0;';
-    document.documentElement.appendChild(ref);
-    var designW = ref.getBoundingClientRect().width;
-    document.documentElement.removeChild(ref);
-
-    var vw = window.innerWidth;
-    var scale = Math.min(vw / designW, 0.7071);
-    document.body.style.zoom = scale.toString();
-  }
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', applyZoom);
-  } else {
-    applyZoom();
-  }
-  window.addEventListener('resize', applyZoom);
-})();
-</script>
 </body>
 </html>
