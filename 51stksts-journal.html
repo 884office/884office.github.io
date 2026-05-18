@@ -34,22 +34,22 @@
 
   .theme-band { background:#EBF6F4; padding:1.5mm 8mm; font-size:8.5pt; color:#1a2a5e; font-weight:500; border-left:2.5mm solid #0D8A72; }
 
-  .speakers-section { padding:3mm 8mm 2mm; flex:1; }
-  .section-header { font-size:8.5pt; font-family:'Space Mono',monospace; color:#0D8A72; letter-spacing:0.2em; font-weight:700; margin-bottom:2mm; padding-bottom:0.8mm; border-bottom:0.3mm solid #dde; }
-  .speakers-grid { display:grid; grid-template-columns:1fr 1fr; gap:2mm; margin-bottom:2mm; }
-  .speaker-card { border:0.3mm solid #dde; border-radius:1.5mm; padding:2mm; background:#f8f9ff; }
-  .speaker-header { display:flex; align-items:center; gap:2mm; margin-bottom:1.5mm; }
-  .speaker-photo { width:11mm; height:11mm; object-fit:cover; object-position:top; border-radius:1mm; flex-shrink:0; }
-  .speaker-tag { display:inline-block; font-size:6.5pt; font-weight:700; color:#fff; padding:0.2mm 1.5mm; border-radius:0.8mm; margin-bottom:0.5mm; }
-  .speaker-name { font-size:9.5pt; font-weight:700; color:#1a2a5e; line-height:1.2; }
-  .speaker-affil { font-size:7pt; color:#555; line-height:1.3; margin-top:0.3mm; }
-  .speaker-topic { font-size:7.5pt; font-weight:700; color:#1a2a5e; line-height:1.4; padding-top:1.5mm; border-top:0.3mm solid #dde; }
+  .speakers-section { padding:3mm 8mm 2mm; flex:1; display:flex; flex-direction:column; }
+  .section-header { font-size:9pt; font-family:'Space Mono',monospace; color:#0D8A72; letter-spacing:0.2em; font-weight:700; margin-bottom:2.5mm; padding-bottom:1mm; border-bottom:0.3mm solid #dde; }
+  .speakers-grid { display:grid; grid-template-columns:1fr 1fr; gap:3mm; margin-bottom:3mm; flex:1; align-content:stretch; }
+  .speaker-card { border:0.3mm solid #dde; border-radius:1.5mm; padding:3mm; background:#f8f9ff; display:flex; flex-direction:column; }
+  .speaker-header { display:flex; align-items:center; gap:2.5mm; margin-bottom:2mm; }
+  .speaker-photo { width:15mm; height:15mm; object-fit:cover; object-position:top; border-radius:1mm; flex-shrink:0; }
+  .speaker-tag { display:inline-block; font-size:7.5pt; font-weight:700; color:#fff; padding:0.3mm 1.8mm; border-radius:0.8mm; margin-bottom:0.8mm; }
+  .speaker-name { font-size:11pt; font-weight:700; color:#1a2a5e; line-height:1.2; }
+  .speaker-affil { font-size:8pt; color:#555; line-height:1.3; margin-top:0.5mm; }
+  .speaker-topic { font-size:8.5pt; font-weight:700; color:#1a2a5e; line-height:1.4; padding-top:2mm; border-top:0.3mm solid #dde; flex:1; }
 
-  .panel-box { border:0.5mm solid rgba(216,90,48,0.3); border-radius:1.5mm; padding:2mm 3mm; display:flex; align-items:center; gap:3mm; background:rgba(216,90,48,0.05); margin-top:2mm; }
-  .panel-tag { background:rgba(216,90,48,0.12); color:#D85A30; font-size:7pt; font-weight:700; padding:0.5mm 2mm; border-radius:0.8mm; flex-shrink:0; font-family:'Space Mono',monospace; letter-spacing:0.05em; border:0.3mm solid rgba(216,90,48,0.3); }
+  .panel-box { border:0.5mm solid rgba(216,90,48,0.3); border-radius:1.5mm; padding:3mm 4mm; display:flex; align-items:center; gap:3mm; background:rgba(216,90,48,0.05); margin-top:0; }
+  .panel-tag { background:rgba(216,90,48,0.12); color:#D85A30; font-size:8.5pt; font-weight:700; padding:0.8mm 2.5mm; border-radius:0.8mm; flex-shrink:0; font-family:'Space Mono',monospace; letter-spacing:0.05em; border:0.3mm solid rgba(216,90,48,0.3); }
   .panel-content { }
-  .panel-time { font-size:7pt; color:#888; margin-bottom:0.3mm; font-family:'Space Mono',monospace; }
-  .panel-topic { font-size:8.5pt; font-weight:700; color:#1a2a5e; }
+  .panel-time { font-size:8pt; color:#888; margin-bottom:0.5mm; font-family:'Space Mono',monospace; }
+  .panel-topic { font-size:10pt; font-weight:700; color:#1a2a5e; }
 
   .axes-section { margin:0 8mm 2mm; background:#EBF6F4; padding:2mm 3mm; border-radius:1mm; }
   .axes-title { font-size:8pt; font-family:'Space Mono',monospace; color:#0D8A72; letter-spacing:0.15em; font-weight:700; margin-bottom:1.5mm; }
