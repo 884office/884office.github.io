@@ -53,11 +53,11 @@
 
   .axes-section { margin:0 8mm 2mm; background:#EBF6F4; padding:2mm 3mm; border-radius:1mm; }
   .axes-title { font-size:8pt; font-family:'Space Mono',monospace; color:#0D8A72; letter-spacing:0.15em; font-weight:700; margin-bottom:1.5mm; }
-  .axes-grid { display:flex; flex-direction:column; gap:1mm; }
-  .axis-item { display:flex; align-items:baseline; gap:2.5mm; }
-  .axis-num { font-size:10pt; font-weight:900; line-height:1; flex-shrink:0; }
-  .axis-label { font-size:9pt; font-weight:700; color:#1a2a5e; }
-  .axis-desc { display:none; }
+  .axes-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:2mm; }
+  .axis-item { display:flex; flex-direction:column; }
+  .axis-num { font-size:10pt; font-weight:900; line-height:1; margin-bottom:0.5mm; }
+  .axis-label { font-size:9pt; font-weight:700; color:#1a2a5e; margin-bottom:0.3mm; }
+  .axis-desc { font-size:6.5pt; color:#555; line-height:1.35; }
 
   .bottom-section { padding:2mm 8mm; display:flex; gap:3mm; }
   .latest-info { flex:1; }
