@@ -55,8 +55,9 @@
   .axes-title { font-size:8pt; font-family:'Space Mono',monospace; color:#0D8A72; letter-spacing:0.15em; font-weight:700; margin-bottom:1.5mm; }
   .axes-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:2mm; }
   .axis-item { display:flex; flex-direction:column; }
-  .axis-num { font-size:10pt; font-weight:900; line-height:1; margin-bottom:0.5mm; }
-  .axis-label { font-size:9pt; font-weight:700; color:#1a2a5e; margin-bottom:0.3mm; }
+  .axis-header { display:flex; align-items:baseline; gap:1.5mm; margin-bottom:0.3mm; }
+  .axis-num { font-size:10pt; font-weight:900; line-height:1; flex-shrink:0; }
+  .axis-label { font-size:9pt; font-weight:700; color:#1a2a5e; }
   .axis-desc { font-size:6.5pt; color:#555; line-height:1.35; }
 
   .bottom-section { padding:2mm 8mm; display:flex; gap:3mm; }
@@ -357,19 +358,16 @@
     <div class="axes-title">SEMINAR AXES</div>
     <div class="axes-grid">
       <div class="axis-item">
-        <div class="axis-num" style="color:#4A3FB5;">01</div>
-        <div class="axis-label">技術基盤の研究</div>
+        <div class="axis-header"><span class="axis-num" style="color:#4A3FB5;">01</span><span class="axis-label">技術基盤の研究</span></div>
         <div class="axis-desc">篠田 教授・小池 教授<br>行動認識アルゴリズム・姿勢推定・動作認識</div>
       </div>
       <div class="axis-item">
-        <div class="axis-num" style="color:#0D8A72;">02</div>
-        <div class="axis-label">研究活動への実装</div>
+        <div class="axis-header"><span class="axis-num" style="color:#0D8A72;">02</span><span class="axis-label">研究活動への実装</span></div>
         <div class="axis-desc">神田 教授<br>生命科学研究の自動化・ロボット実験施設</div>
       </div>
       <div class="axis-item">
-        <div class="axis-num" style="color:#D85A30;">03</div>
-        <div class="axis-label">社会への実装</div>
-        <div class="axis-desc" style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">若狭 アジラ執行役員<br>AI警備システム、産学連携から社会実装へ</div>
+        <div class="axis-header"><span class="axis-num" style="color:#D85A30;">03</span><span class="axis-label">社会への実装</span></div>
+        <div class="axis-desc">若狭 アジラ執行役員<br>AI警備システム、産学連携から社会実装へ</div>
       </div>
     </div>
   </div>
