@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1122">
+<title>第16回TITC・KITC合同セミナー企画</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Space+Mono:wght@400;700&display=swap');
+
+  :root {
+    --navy:      #1A2351;
+    --red:       #C8102E;
+    --amber:     #D4860A;
+    --teal:      #0D7A6A;
+    --offwhite:  #F9F4EE;
+    --white:     #FFFFFF;
+    --gray:      #6B7280;
+    --lightgray: #E2E4EE;
+    --redlight:  #FFF0F0;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  @page { size: A4 portrait; margin: 0; }
+
+  body {
+    width: 297mm;
+    min-height: 420mm;
+    position: relative;
+    background: var(--white);
+    font-family: 'Noto Sans JP', sans-serif;
+    color: var(--navy);
+    overflow-x: hidden;
+    zoom: 0.7071;
+    margin: 0 auto;
+  }
+  @media screen and (max-width: 1122px) {
+    body { zoom: 1; }
+  }
+
+  /* ── ヘッダー帯 ── */
+  .header {
+    background: var(--navy);
+    padding: 6mm 12mm 4mm;
+    position: relative;
+    overflow: hidden;
+  }
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2mm;
+  }
+  .seminar-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 11.5pt;
+    color: rgba(255,255,255,0.45);
+    letter-spacing: 0.2em;
+    line-height: 1.6;
+    margin-bottom: 2mm;
+  }
+  .seminar-no {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 22pt;
+    font-weight: 900;
+    color: var(--white);
+    letter-spacing: 0.03em;
+    line-height: 1.15;
+    margin-bottom: 2mm;
+  }
+  .main-title {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 28pt;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.25;
+    letter-spacing: 0.02em;
+    margin-bottom: 1mm;
+    padding-right: 80mm;
+  }
+  .main-title-sub {
+    font-size: 20pt;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+  .sub-title {
+    font-size: 12pt;
+    color: rgba(255,255,255,0.65);
+    letter-spacing: 0.1em;
+    font-weight: 300;
+  }
+
+  /* ── 日時・場所バナー ── */
+  .info-banner {
+    background: var(--red);
+    padding: 3mm 0 3mm 12mm;
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    min-height: 22mm;
+  }
+  .info-date {
+    flex: 1.4;
+    padding-right: 6mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .info-date-top {
+    display: flex;
+    align-items: baseline;
+    gap: 3mm;
+  }
+  .info-detail {
+    flex: 2;
+    padding: 0 6mm;
+    border-left: 0.3mm solid rgba(255,255,255,0.3);
+    border-right: 0.3mm solid rgba(255,255,255,0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 13.5pt;
+    color: var(--white);
+    line-height: 1.3;
+    font-weight: 400;
+  }
+  .info-detail strong {
+    color: var(--white);
+    font-weight: 700;
+    font-size: 14.5pt;
+  }
+  .info-right {
+    flex: 0 0 auto;
+    padding-left: 6mm;
+    padding-right: 12mm;
+    text-align: left;
+    font-size: 12pt;
+    color: rgba(255,255,255,0.95);
+    line-height: 1.2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5mm;
+  }
+  .info-right-label {
+    font-size: 9.5pt;
+    color: rgba(255,255,255,0.65);
+    font-family: 'Space Mono', monospace;
+    letter-spacing: 0.1em;
+    margin-bottom: 0;
+  }
+  .date-big {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 30pt;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1;
+  }
+  .date-label {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 14pt;
+    color: rgba(255,255,255,0.85);
+    font-weight: 500;
+  }
+  .date-sub {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 13pt;
+    color: var(--white);
+    margin-top: 2mm;
+    line-height: 1.7;
+    font-weight: 400;
+  }
+  .date-sub strong {
+    color: var(--white);
+    font-weight: 700;
+    font-size: 13pt;
+  }
+  .info-divider {
+    width: 0.3mm;
+    height: 10mm;
+    background: rgba(255,255,255,0.35);
+  }
+
+  /* ── 主催・共催バンド ── */
+  .organizer-band {
+    background: var(--white);
+    border-bottom: 0.5mm solid var(--lightgray);
+    padding: 1.5mm 12mm;
+    display: flex;
+    align-items: center;
+    gap: 6mm;
+  }
+  .org-item { display: flex; align-items: baseline; gap: 3mm; }
+  .org-role {
+    font-size: 12.5pt; font-family: 'Space Mono', monospace;
+    color: var(--red); letter-spacing: 0.1em; font-weight: 700; white-space: nowrap;
+  }
+  .org-name { font-size: 12.5pt; color: var(--navy); font-weight: 500; letter-spacing: 0.03em; }
+  .org-sep  { font-size: 12.5pt; color: var(--lightgray); }
+
+  /* ── テーマ帯 ── */
+  .theme-band {
+    background: var(--offwhite);
+    padding: 2.5mm 12mm 2.5mm 9mm;
+    border-left: 3mm solid var(--red);
+    margin: 0;
+  }
+  .theme-label {
+    font-size: 12.5pt;
+    color: var(--red);
+    letter-spacing: 0.2em;
+    font-family: 'Space Mono', monospace;
+    margin-bottom: 1.5mm;
+  }
+  .theme-text {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 17pt;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.3;
+  }
+  .theme-en {
+    font-size: 12pt;
+    color: var(--gray);
+    margin-top: 1mm;
+    font-weight: 300;
+    letter-spacing: 0.08em;
+  }
+
+  /* ── 本体 ── */
+  .body-wrap {
+    padding: 3mm 12mm;
+    display: block;
+    position: relative;
+  }
+
+  /* ── プログラム ── */
+  .section-title {
+    font-size: 12.5pt;
+    letter-spacing: 0.2em;
+    color: var(--navy);
+    font-family: 'Space Mono', monospace;
+    margin-bottom: 2mm;
+    display: flex;
+    align-items: center;
+    gap: 2mm;
+  }
+  .section-title::after {
+    content: '';
+    flex: 1;
+    height: 0.3mm;
+    background: var(--lightgray);
+  }
+
+  .program-list { display: flex; flex-direction: column; gap: 1.5mm; }
+
+  .program-item {
+    display: grid;
+    grid-template-columns: 20mm 1fr;
+    gap: 1.5mm;
+    align-items: start;
+  }
+  .prog-time {
+    font-family: 'Space Mono', monospace;
+    font-size: 12.5pt;
+    color: var(--gray);
+    padding-top: 1mm;
+    line-height: 1.4;
+  }
+  .prog-content {
+    border-left: 2px solid var(--lightgray);
+    padding-left: 3mm;
+    padding-bottom: 0.5mm;
+  }
+  .prog-content.lecture-1 { border-color: var(--red); }
+  .prog-content.event     { border-color: var(--lightgray); }
+  .prog-content.qa        { border-color: var(--amber); }
+
+  .prog-tag {
+    font-size: 12.5pt;
+    font-family: 'Space Mono', monospace;
+    letter-spacing: 0.1em;
+    padding: 0.5mm 2mm;
+    border-radius: 1mm;
+    display: inline-block;
+    margin-bottom: 1.5mm;
+    font-weight: 700;
+  }
+  .tag-lecture { background: rgba(200,16,46,0.1); color: var(--red); }
+  .tag-qa      { background: rgba(212,134,10,0.12); color: var(--amber); }
+  .tag-opening { background: var(--lightgray); color: var(--gray); }
+
+  .prog-speaker {
+    font-size: 15pt;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.3;
+    margin-bottom: 0.8mm;
+  }
+  .prog-affil {
+    font-size: 12.5pt;
+    color: var(--gray);
+    line-height: 1.4;
+    margin-bottom: 0.5mm;
+  }
+  .prog-topic {
+    font-size: 11.5pt;
+    color: var(--navy);
+    line-height: 1.5;
+    font-weight: 400;
+  }
+  .prog-simple {
+    font-size: 11.5pt;
+    color: var(--gray);
+    line-height: 1.5;
+  }
+
+  /* ── REGISTRATIONカード ── */
+  .reg-card {
+    background: var(--red);
+    padding: 2mm 12mm 3mm;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8mm;
+    position: relative;
+  }
+  .reg-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0.7mm;
+    background: linear-gradient(to right, var(--navy) 60%, var(--amber) 100%);
+    z-index: 2;
+  }
+  .reg-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1.5mm;
+    background: linear-gradient(to right, var(--navy) 60%, var(--amber) 100%);
+    z-index: 2;
+  }
+  .reg-card-title {
+    font-size: 12.5pt;
+    font-family: 'Space Mono', monospace;
+    color: rgba(255,255,255,0.65);
+    letter-spacing: 0.15em;
+    font-weight: 700;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .reg-card-body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6mm;
+    flex: 1;
+  }
+  .reg-card-text {
+    font-size: 13pt;
+    color: var(--white);
+    line-height: 1.3;
+  }
+  .reg-link {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 12pt;
+    font-weight: 700;
+    word-break: break-all;
+  }
+  .reg-card-deadline {
+    font-size: 13pt;
+    font-weight: 700;
+    color: rgba(255,255,255,0.8);
+  }
+
+  /* ── フッター ── */
+  .footer {
+    background: var(--navy);
+    padding: 1mm 12mm;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-left {
+    font-size: 12.5pt;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.4;
+  }
+  .footer-left strong { color: var(--white); }
+  .footer-right {
+    text-align: right;
+    font-size: 12.5pt;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.4;
+  }
+
+  /* ── 情報フッター ── */
+  .info-footer {
+    background: var(--offwhite);
+    border-top: 0.3mm solid var(--lightgray);
+    padding: 0.5mm 12mm;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1mm;
+  }
+  .info-footer-label {
+    font-size: 11pt;
+    font-family: 'Space Mono', monospace;
+    color: var(--red);
+    letter-spacing: 0.15em;
+    margin-bottom: 0.3mm;
+    font-weight: 700;
+  }
+  .info-footer-text {
+    font-size: 11pt;
+    color: var(--gray);
+    line-height: 1.4;
+  }
+  .info-footer-text a {
+    color: var(--navy);
+    text-decoration: none;
+    font-weight: 500;
+    word-break: break-all;
+    font-size: 11pt;
+  }
+  .info-footer-note {
+    font-size: 10pt;
+    color: var(--gray);
+    margin-top: 0;
+    opacity: 0.7;
+  }
+
+  /* 区切りライン */
+  .grad-line {
+    height: 0.8mm;
+    background: linear-gradient(90deg, var(--navy) 0%, var(--red) 50%, var(--amber) 100%);
+    margin: 0;
+  }
+
+  @media print {
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ヘッダー -->
+<div class="header">
+  <!-- 右上装飾：背景三角 -->
+  <svg style="position:absolute;top:0;right:0;width:95mm;height:100%;display:block;pointer-events:none;" viewBox="0 0 226 140" preserveAspectRatio="xMaxYMid meet" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="226,0 226,140 70,0" fill="#A00020" opacity="0.25"/>
+    <polygon points="226,0 226,80 150,0" fill="#C8102E" opacity="0.18"/>
+  </svg>
+  <!-- 右上装飾：放送AIイラスト -->
+  <svg style="position:absolute;top:0;right:30mm;width:76mm;height:100%;display:block;" viewBox="0 0 226 140" preserveAspectRatio="xMaxYMid meet" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <clipPath id="hclip"><rect x="0" y="0" width="226" height="140"/></clipPath>
+    </defs>
+    <g clip-path="url(#hclip)">
+
+      <!-- ══ 放送タワー ══ -->
+      <!-- タワー基部 -->
+      <rect x="88" y="105" width="18" height="6" rx="1" fill="#8A0020" stroke="#FFAAAA" stroke-width="2" opacity="0.9"/>
+      <!-- タワー胴体（テーパー） -->
+      <polygon points="92,105 104,105 101,60 95,60" fill="#8A0020" stroke="#FFAAAA" stroke-width="2" opacity="0.85"/>
+      <!-- 上部ガード -->
+      <rect x="90" y="55" width="16" height="6" rx="0.5" fill="#A00028" stroke="#FFAAAA" stroke-width="2" opacity="0.9"/>
+      <!-- アンテナ本体 -->
+      <line x1="98" y1="55" x2="98" y2="15" stroke="#FFAAAA" stroke-width="2.5" opacity="0.95"/>
+      <!-- アンテナ先端 -->
+      <circle cx="98" cy="13" r="2.5" fill="#FF6080" opacity="0.9"/>
+      <!-- 横ビーム -->
+      <line x1="80" y1="42" x2="116" y2="42" stroke="#FFAAAA" stroke-width="1.8" opacity="0.6"/>
+      <line x1="84" y1="52" x2="112" y2="52" stroke="#FFAAAA" stroke-width="1.5" opacity="0.5"/>
+      <!-- 斜めガイ線 -->
+      <line x1="98" y1="30" x2="80" y2="42" stroke="#FFAAAA" stroke-width="1.2" opacity="0.4" stroke-dasharray="2 2"/>
+      <line x1="98" y1="30" x2="116" y2="42" stroke="#FFAAAA" stroke-width="1.2" opacity="0.4" stroke-dasharray="2 2"/>
+
+      <!-- ══ 電波放射 ══ -->
+      <!-- 左側 -->
+      <path d="M78 40 Q62 30 58 18" fill="none" stroke="#FFAAAA" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+      <path d="M72 46 Q52 38 46 22" fill="none" stroke="#FFAAAA" stroke-width="2.0" stroke-linecap="round" opacity="0.5"/>
+      <path d="M66 52 Q42 46 36 28" fill="none" stroke="#FFAAAA" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+      <!-- 右側 -->
+      <path d="M118 40 Q134 30 138 18" fill="none" stroke="#FFAAAA" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+      <path d="M124 46 Q144 38 150 22" fill="none" stroke="#FFAAAA" stroke-width="2.0" stroke-linecap="round" opacity="0.5"/>
+      <path d="M130 52 Q154 46 160 28" fill="none" stroke="#FFAAAA" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+
+      <!-- ══ TV/モニター ══ -->
+      <!-- 左モニター -->
+      <rect x="40" y="68" width="38" height="28" rx="2.5" fill="rgba(168,0,32,0.15)" stroke="#FFAAAA" stroke-width="2.2" opacity="0.85"/>
+      <rect x="43" y="71" width="32" height="20" rx="1.5" fill="rgba(168,0,32,0.25)" stroke="#FFAAAA" stroke-width="1.2" opacity="0.7"/>
+      <!-- モニタースタンド左 -->
+      <line x1="59" y1="96" x2="56" y2="103" stroke="#FFAAAA" stroke-width="2" opacity="0.6"/>
+      <line x1="56" y1="103" x2="63" y2="103" stroke="#FFAAAA" stroke-width="2" opacity="0.6"/>
+      <!-- 画面内容（周波数バー） -->
+      <rect x="46" y="82" width="4" height="5" rx="0.5" fill="#FF6080" opacity="0.6"/>
+      <rect x="52" y="78" width="4" height="9" rx="0.5" fill="#FF6080" opacity="0.8"/>
+      <rect x="58" y="75" width="4" height="12" rx="0.5" fill="#FF8090" opacity="0.9"/>
+      <rect x="64" y="79" width="4" height="8" rx="0.5" fill="#FF6080" opacity="0.7"/>
+      <rect x="70" y="83" width="4" height="4" rx="0.5" fill="#FF6080" opacity="0.5"/>
+
+      <!-- 右モニター -->
+      <rect x="148" y="68" width="38" height="28" rx="2.5" fill="rgba(168,0,32,0.15)" stroke="#FFAAAA" stroke-width="2.2" opacity="0.85"/>
+      <rect x="151" y="71" width="32" height="20" rx="1.5" fill="rgba(168,0,32,0.25)" stroke="#FFAAAA" stroke-width="1.2" opacity="0.7"/>
+      <!-- モニタースタンド右 -->
+      <line x1="167" y1="96" x2="164" y2="103" stroke="#FFAAAA" stroke-width="2" opacity="0.6"/>
+      <line x1="164" y1="103" x2="171" y2="103" stroke="#FFAAAA" stroke-width="2" opacity="0.6"/>
+      <!-- 画面内容（AIネットワーク） -->
+      <circle cx="163" cy="79" r="3" fill="none" stroke="#FFAAAA" stroke-width="1.5" opacity="0.7"/>
+      <circle cx="172" cy="75" r="2.5" fill="none" stroke="#FF8090" stroke-width="1.5" opacity="0.8"/>
+      <circle cx="179" cy="82" r="2.5" fill="none" stroke="#FFAAAA" stroke-width="1.5" opacity="0.7"/>
+      <line x1="166" y1="79" x2="170" y2="76" stroke="#FFAAAA" stroke-width="1.2" opacity="0.6"/>
+      <line x1="174" y1="77" x2="177" y2="81" stroke="#FFAAAA" stroke-width="1.2" opacity="0.6"/>
+      <line x1="164" y1="82" x2="162" y2="85" stroke="#FF8090" stroke-width="1.5" opacity="0.5" stroke-dasharray="1.5 1.5"/>
+
+      <!-- ══ AIチップ（中央下） ══ -->
+      <rect x="85" y="112" width="26" height="20" rx="2" fill="rgba(140,0,24,0.2)" stroke="#FFAAAA" stroke-width="2" opacity="0.8"/>
+      <!-- チップ回路線 -->
+      <line x1="88" y1="115" x2="94" y2="115" stroke="#FF8090" stroke-width="1" opacity="0.6"/>
+      <line x1="88" y1="119" x2="94" y2="119" stroke="#FF8090" stroke-width="1" opacity="0.6"/>
+      <line x1="88" y1="123" x2="94" y2="123" stroke="#FF8090" stroke-width="1" opacity="0.6"/>
+      <line x1="102" y1="115" x2="108" y2="115" stroke="#FF8090" stroke-width="1" opacity="0.6"/>
+      <line x1="102" y1="119" x2="108" y2="119" stroke="#FF8090" stroke-width="1" opacity="0.6"/>
+      <line x1="102" y1="123" x2="108" y2="123" stroke="#FF8090" stroke-width="1" opacity="0.6"/>
+      <rect x="93" y="114" width="10" height="14" rx="1" fill="#A00020" stroke="#FFAAAA" stroke-width="1.2" opacity="0.7"/>
+      <text x="98" y="123" text-anchor="middle" font-size="5" fill="#FFAAAA" font-family="monospace" opacity="0.8">AI</text>
+
+      <!-- ══ データフロー（タワー→AI→モニター） ══ -->
+      <path d="M98 110 Q98 122 98 132" fill="none" stroke="#FFAAAA" stroke-width="1.8" stroke-dasharray="2 2" opacity="0.45"/>
+      <path d="M78 90 Q72 100 85 116" fill="none" stroke="#FFAAAA" stroke-width="1.5" stroke-dasharray="2 2" opacity="0.4"/>
+      <path d="M118 90 Q124 100 111 116" fill="none" stroke="#FFAAAA" stroke-width="1.5" stroke-dasharray="2 2" opacity="0.4"/>
+
+      <!-- ══ 床ライン ══ -->
+      <line x1="30" y1="132" x2="196" y2="132" stroke="#FFAAAA" stroke-width="1.8" opacity="0.15"/>
+    </g>
+  </svg>
+
+  <div class="header-top">
+    <div>
+      <div class="seminar-label">The 16th TITC · KITC Joint Seminar</div>
+      <div class="seminar-no">第16回 東京科学大学ITクラブ・蔵前ITコミュニティー 合同セミナー</div>
+    </div>
+  </div>
+  <div class="main-title">
+    放送局におけるAI技術の<br>研究開発と実用化<span class="main-title-sub"><br>～放送の未来を変えるAI，そのコア技術に迫る～</span>
+  </div>
+  <div style="position:absolute;bottom:0;left:0;width:100%;height:1.5mm;background:linear-gradient(90deg,#C8102E,#D4860A,#1A2351);"></div>
+</div>
+
+<!-- 主催・共催バンド -->
+<div class="organizer-band">
+  <div class="org-item" style="align-items:center;">
+    <span class="org-role">主催</span>
+    <span class="org-name">一般社団法人 蔵前工業会</span>
+  </div>
+  <div class="org-sep">／</div>
+  <div class="org-item" style="align-items:center;">
+    <span class="org-role">後援</span>
+    <span class="org-name">国立大学法人 東京科学大学</span>
+  </div>
+</div>
+
+<!-- 日時・場所バナー -->
+<div class="info-banner">
+  <div class="info-date">
+    <div class="info-date-top">
+      <div class="date-big">2026.7.8</div>
+      <div class="date-label">WED</div>
+    </div>
+    <div class="date-sub">
+      <strong>講演会</strong> 18:00〜19:25<br>
+      <strong>交流会</strong> 19:30〜20:30
+    </div>
+  </div>
+  <div class="info-divider"></div>
+  <div class="info-detail">
+    <span style="font-size:9.5pt;font-family:'Space Mono',monospace;color:rgba(255,255,255,0.65);letter-spacing:0.1em;font-weight:400;">講演会</span><span style="display:block;margin-top:0;font-size:14.5pt;color:var(--white);font-weight:700;">東京科学大学蔵前会館<br>くらまえホール</span><span style="display:block;margin-top:0;font-size:12pt;color:var(--white);font-weight:700;">　（東急大井町線・目黒線大岡山駅前）</span><span style="white-space:nowrap;"><strong>Zoom Webinar</strong> <span style="font-size:9pt;font-family:'Space Mono',monospace;background:rgba(255,255,255,0.2);color:var(--white);padding:0.3mm 2.5mm;border-radius:1mm;border:0.3mm solid rgba(255,255,255,0.5);letter-spacing:0.1em;display:inline-block;vertical-align:middle;">⊕ HYBRID</span></span><span style="display:block;margin-top:1mm;font-size:9.5pt;font-family:'Space Mono',monospace;color:rgba(255,255,255,0.65);letter-spacing:0.1em;font-weight:400;">交流会</span><span style="display:block;font-size:14.5pt;color:var(--white);font-weight:700;">同 ロイアルブルーホール</span>
+  </div>
+  <div class="info-divider"></div>
+  <div class="info-right">
+    <span class="info-right-label">参加対象</span>
+    <span style="display:block;line-height:1.2;font-weight:700;color:var(--white);font-size:11.5pt;">蔵前工業会会員、東京科学大学職員・学生、</span>
+    <span style="display:block;line-height:1.2;font-weight:700;color:var(--white);font-size:11.5pt;">一般（どなたでも参加できます）</span>
+    <span class="info-right-label" style="margin-top:1mm;">参加費</span>
+    <span style="display:block;line-height:1.3;font-weight:700;color:var(--white);font-size:13pt;">講演会：無料</span>
+    <span style="display:block;line-height:1.3;font-weight:700;color:var(--white);font-size:13pt;">交流会：3,000円</span>
+  </div>
+</div>
+
+<!-- グラデーションライン -->
+<div class="grad-line"></div>
+
+<!-- REGISTRATION バンド -->
+<div class="reg-card">
+  <div class="reg-card-title">REGISTRATION</div>
+  <div class="reg-card-body">
+    <div style="flex:1;">
+      <div class="reg-card-text">蔵前工業会のホームページから申し込みください。</div>
+      <a href="https://www.kuramae.ne.jp" class="reg-link">https://www.kuramae.ne.jp</a>
+    </div>
+    <div class="reg-card-deadline">締切：2026年7月3日（金）</div>
+  </div>
+</div>
+
+<!-- テーマ帯 -->
+<div class="theme-band">
+  <div class="theme-label">LECTURE</div>
+  <div class="theme-text">望月 貴裕　NHK放送技術研究所 スマートプロダクション研究部 副部長</div>
+  <div class="theme-en">Takahiro Mochizuki, NHK Science and Technology Research Laboratories</div>
+</div>
+
+<!-- 本体 -->
+<div class="body-wrap">
+
+  <div class="program-section">
+    <div class="section-title">PROGRAM</div>
+    <div class="program-list">
+
+      <!-- 受付 -->
+      <div class="program-item">
+        <div class="prog-time">17:15</div>
+        <div class="prog-content event">
+          <div class="prog-simple">受付開始　（東京科学大学蔵前会館）</div>
+        </div>
+      </div>
+
+      <!-- Zoom開設 -->
+      <div class="program-item">
+        <div class="prog-time">17:30</div>
+        <div class="prog-content event">
+          <div class="prog-simple">Zoom Webinar 開設</div>
+        </div>
+      </div>
+
+      <!-- 開始・はじめに -->
+      <div class="program-item">
+        <div class="prog-time">18:00<br>18:05</div>
+        <div class="prog-content event">
+          <div class="prog-simple">
+            はじめに　宮崎 勝（NHK放送技術研究所）
+          </div>
+        </div>
+      </div>
+
+      <!-- 大学挨拶 -->
+      <div class="program-item">
+        <div class="prog-time">18:05<br>18:10</div>
+        <div class="prog-content event">
+          <div class="prog-simple">大学ご挨拶　益 一哉 会長（東京科学大学）</div>
+        </div>
+      </div>
+
+      <!-- 工業会挨拶 -->
+      <div class="program-item">
+        <div class="prog-time">18:10<br>18:15</div>
+        <div class="prog-content event">
+          <div class="prog-simple">蔵前工業会ご挨拶　田村 良明（蔵前工業会 理事・科学技術部会長）</div>
+        </div>
+      </div>
+
+      <!-- 講演 -->
+      <div class="program-item">
+        <div class="prog-time">18:15<br>19:00</div>
+        <div class="prog-content lecture-1">
+          <div style="display:flex;align-items:center;gap:3mm;margin-bottom:1.5mm;">
+            <span class="prog-tag tag-lecture" style="margin-bottom:0;flex-shrink:0;">講　演</span>
+            <span class="prog-topic" style="font-size:19pt;font-weight:700;color:var(--navy);">放送局におけるAI技術の研究開発と実用化</span>
+          </div>
+          <div class="prog-speaker">望月 貴裕</div>
+          <div class="prog-affil">NHK放送技術研究所 スマートプロダクション研究部 副部長</div>
+          <div class="prog-topic" style="margin-top:0.5mm;">〜放送の未来を変えるAI，そのコア技術に迫る〜</div>
+        </div>
+      </div>
+
+      <!-- Q&A -->
+      <div class="program-item">
+        <div class="prog-time">19:00<br>19:20</div>
+        <div class="prog-content qa">
+          <div style="display:flex;align-items:center;gap:3mm;">
+            <span class="prog-tag tag-qa" style="margin-bottom:0;flex-shrink:0;">Q &amp; A</span>
+            <span class="prog-simple" style="color:var(--navy);">質疑応答</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 閉会挨拶 -->
+      <div class="program-item">
+        <div class="prog-time">19:20<br>19:25</div>
+        <div class="prog-content event">
+          <div class="prog-simple">閉会挨拶　山岡 克式（東京科学大学 工学院 教授）</div>
+        </div>
+      </div>
+
+      <!-- 交流会 -->
+      <div class="program-item">
+        <div class="prog-time">19:30<br>20:30</div>
+        <div class="prog-content event">
+          <div class="prog-simple">
+            交流会　ロイアルブルーホール<br>
+            <span style="font-size:10.5pt;color:var(--gray);">司会：林 雅弘（蔵前ITコミュニティー）</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div><!-- /body-wrap -->
+
+<!-- 情報フッター -->
+<div style="display:flex;align-items:stretch;">
+  <div class="info-footer" style="flex:1;">
+    <div>
+      <div class="info-footer-label">LATEST INFO</div>
+      <div class="info-footer-note">一部変更の可能性があります。最新情報をお確かめください。</div>
+      <div class="info-footer-text">
+        <a href="https://www.kuramae.ne.jp">https://www.kuramae.ne.jp</a>
+      </div>
+    </div>
+  </div>
+  <div style="background:#F0F2F8;padding:1.5mm 12mm 1.5mm 3mm;display:flex;align-items:center;gap:6mm;flex-shrink:0;">
+    <div style="display:flex;gap:3mm;">
+      <div>
+        <div style="font-size:9pt;font-family:'Space Mono',monospace;color:var(--red);letter-spacing:0.15em;font-weight:700;margin-bottom:0.8mm;">TITC</div>
+        <div style="font-size:11pt;color:var(--navy);font-weight:500;line-height:1.3;">東京科学大学<br>ITクラブ</div>
+      </div>
+      <div style="width:0.3mm;background:var(--lightgray);margin:0 1mm;"></div>
+      <div>
+        <div style="font-size:9pt;font-family:'Space Mono',monospace;color:var(--navy);letter-spacing:0.15em;font-weight:700;margin-bottom:0.8mm;">KITC</div>
+        <div style="font-size:11pt;color:var(--navy);font-weight:500;line-height:1.3;">蔵前<br>ITコミュニティー</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- フッター -->
+<div class="footer">
+  <div class="footer-left">
+    <strong>一般社団法人 蔵前工業会</strong>
+  </div>
+  <div class="footer-right">
+    第16回 TITC・KITC合同セミナー　2026年7月8日（水）
+  </div>
+</div>
+
+
+<!-- ===== PAGE 2: 講演概要 ===== -->
+<div style="
+  display: block;
+  page-break-before: always;
+  width: 297mm;
+  min-height: 420mm;
+  box-sizing: border-box;
+  padding: 14mm 17mm 14mm;
+  background: #fff;
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #1a2a5e;
+">
+
+  <!-- ページヘッダー -->
+  <div style="border-bottom: 2px solid #1A2351; padding-bottom: 3mm; margin-bottom: 6mm; display:flex; justify-content:space-between; align-items:baseline;">
+    <div style="font-size:18pt; font-weight:700; color:#1A2351;">第16回 TITC・KITC合同セミナー　講演概要</div>
+    <div style="font-size:12pt; color:#555;">2026年7月8日（水）　東京科学大学 蔵前会館</div>
+  </div>
+
+  <!-- 講演 -->
+  <div style="margin-bottom:4mm; padding-bottom:4mm; border-bottom:1px solid #dde;">
+    <div style="display:flex; align-items:center; gap:3mm; margin-bottom:2mm;">
+      <span style="background:#C8102E; color:#fff; font-size:11pt; font-weight:700; padding:1mm 3mm; border-radius:1mm; flex-shrink:0;">講　演</span>
+      <span style="font-size:15pt; font-weight:700; color:#1A2351;">放送局におけるAI技術の研究開発と実用化〜放送の未来を変えるAI，そのコア技術に迫る〜</span>
+    </div>
+    <div style="font-size:13pt; color:#555; margin-bottom:3mm; font-weight:700;">
+      望月 貴裕　NHK放送技術研究所 スマートプロダクション研究部 副部長
+    </div>
+    <div style="font-size:13pt; color:#333; line-height:1.7; padding:3mm; border-left:2px solid #C8102E;">
+      （講演概要　後日掲載）
+    </div>
+  </div>
+
+  <!-- 講師略歴 -->
+  <div style="margin-bottom:4mm; padding-bottom:4mm; border-bottom:1px solid #dde;">
+    <div style="font-size:14pt; font-weight:700; color:#1A2351; margin-bottom:2mm; border-left:3px solid #D4860A; padding-left:3mm;">
+      講師略歴
+    </div>
+    <div style="font-size:13pt; color:#333; line-height:1.8;">
+      <strong>望月 貴裕（もちづき たかひろ）</strong><br>
+      東京工業大学 情報工学科卒業（H6），同 物情修（H8），同 集積システム専攻 博士（H22）<br>
+      NHK放送技術研究所 スマートプロダクション研究部 副部長<br>
+      放送コンテンツ制作における映像・音声AI処理技術の研究開発に従事。
+    </div>
+  </div>
+
+  <!-- 司会略歴 -->
+  <div style="margin-bottom:4mm; padding-bottom:4mm; border-bottom:1px solid #dde;">
+    <div style="font-size:14pt; font-weight:700; color:#1A2351; margin-bottom:2mm; border-left:3px solid #1A2351; padding-left:3mm;">
+      司会
+    </div>
+    <div style="font-size:13pt; color:#333; line-height:1.8;">
+      <strong>宮崎 勝（みやざき まさる）</strong><br>
+      東京工業大学 知能システム科学専攻修了（1997），同 博士（2015）<br>
+      NHK放送技術研究所
+    </div>
+  </div>
+
+  <!-- セミナー案内 -->
+  <div style="background:#F9F4EE;padding:4mm 5mm;border-radius:2mm;border:0.5mm solid #E2D0C0;">
+    <div style="font-size:12pt;font-weight:700;color:#C8102E;margin-bottom:2mm;font-family:'Space Mono',monospace;letter-spacing:0.1em;">ABOUT THIS SEMINAR</div>
+    <div style="font-size:12pt;color:#333;line-height:1.8;">
+      本セミナーは，東京科学大学ITクラブ（TITC）と蔵前ITコミュニティー（KITC）が合同で開催するセミナーです。
+      IT分野の最前線で活躍するゲストを招き，技術の深掘りと交流を通じて，会員相互の知見共有を図ります。<br>
+      <span style="margin-top:1mm;display:block;font-size:11pt;color:#555;">ハイブリッド（リアル会場・Zoom Webinar）形式で開催します。どなたでも参加いただけます。</span>
+    </div>
+  </div>
+
+  <!-- フッター -->
+  <div style="
+    margin: auto -17mm -14mm;
+    background: #1A2351;
+    padding: 1mm 17mm;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    position: relative;
+    bottom: 0;
+  ">
+    <div style="font-size:12.5pt;color:rgba(255,255,255,0.75);">
+      <strong style="color:#fff;">一般社団法人 蔵前工業会</strong>
+    </div>
+    <div style="font-size:12.5pt;color:rgba(255,255,255,0.75);">
+      第16回 TITC・KITC合同セミナー　2026年7月8日（水）
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
