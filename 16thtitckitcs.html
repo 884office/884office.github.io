@@ -406,6 +406,9 @@
     line-height: 1.4;
   }
 
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+  .todo { color:#C8102E; font-weight:700; animation:blink 1.2s step-end infinite; }
+
   /* ── 情報フッター ── */
   .info-footer {
     background: var(--offwhite);
@@ -684,7 +687,7 @@
       <div class="program-item">
         <div class="prog-time">18:05<br>18:10</div>
         <div class="prog-content event">
-          <div class="prog-simple">大学ご挨拶　益 一哉 会長（東京科学大学）　出席調整（山岡）</div>
+          <div class="prog-simple">大学ご挨拶　益 一哉 会長（東京科学大学）　<span class="todo">出席調整（山岡）</span></div>
         </div>
       </div>
 
@@ -692,7 +695,7 @@
       <div class="program-item">
         <div class="prog-time">18:10<br>18:15</div>
         <div class="prog-content event">
-          <div class="prog-simple">蔵前工業会ご挨拶　田村 良明（蔵前工業会 業務執行理事・科学技術部会長）　出席調整（林）</div>
+          <div class="prog-simple">蔵前工業会ご挨拶　田村 良明（蔵前工業会 業務執行理事・科学技術部会長）　<span class="todo">出席調整（林）</span></div>
         </div>
       </div>
 
