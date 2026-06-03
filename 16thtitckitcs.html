@@ -703,9 +703,12 @@
       <!-- 交流会 -->
       <div class="program-item">
         <div class="prog-time">19:30<br>20:30</div>
-        <div class="prog-content event">
-          <div class="prog-simple">
-            交流会　ロイアルブルーホール<br>
+        <div class="prog-content event" style="border-color:var(--navy);">
+          <div style="display:flex;align-items:center;gap:3mm;">
+            <span class="prog-tag" style="margin-bottom:0;flex-shrink:0;background:rgba(26,35,81,0.1);color:var(--navy);">交流会</span>
+            <span class="prog-simple">ロイアルブルーホール</span>
+          </div>
+          <div style="margin-top:1mm;">
             <span style="font-size:13.5pt;color:var(--gray);">司会：林 雅弘（蔵前ITコミュニティー）</span>
           </div>
         </div>
@@ -826,7 +829,8 @@
 
 <!-- ===== PAGE 3: フライア (PDF) ===== -->
 <div style="
-  display: block;
+  display: flex;
+  flex-direction: column;
   page-break-before: always;
   width: 297mm;
   min-height: 420mm;
@@ -835,14 +839,19 @@
 ">
   <div style="height:5mm;"></div>
   <div style="background:#0D8A72;padding:2mm 12mm;display:flex;flex-direction:column;gap:0.5mm;">
-    <div style="display:flex;justify-content:space-between;align-items:center;">
-      <div style="font-size:11pt;font-weight:700;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">第16回東京科学大学ITクラブ・蔵前ITコミュニティ合同セミナーフライア</div>
-      <span style="font-family:'Space Mono',monospace;font-size:11pt;background:rgba(255,255,255,0.2);padding:0.3mm 2.5mm;border-radius:0.8mm;color:#fff;flex-shrink:0;margin-left:4mm;">p.3</span>
-    </div>
+    <div style="font-size:11pt;font-weight:700;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">第16回東京科学大学ITクラブ・蔵前ITコミュニティ合同セミナーフライア</div>
     <div style="font-size:9.5pt;color:rgba(255,255,255,0.8);font-family:'Space Mono',monospace;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">URL：<a href="https://www.kuramae.ne.jp/files/user/KVS/20260706_第16回合同セミナ.pdf" style="color:rgba(255,255,255,0.8);">https://www.kuramae.ne.jp/files/user/KVS/20260706_第16回合同セミナ.pdf</a></div>
   </div>
   <div style="height:5mm;"></div>
   <img src="16th-flyer-1.png" style="width:100%;display:block;" alt="第16回TITC/KITC合同セミナーフライア">
+  <div class="footer" style="margin-top:auto;">
+    <div class="footer-left">
+      <strong>蔵前ITコミュニティー</strong>
+    </div>
+    <div class="footer-right">
+      第16回 TITC・KITC合同セミナー企画　<span style="font-family:'Space Mono',monospace;background:rgba(255,255,255,0.15);padding:0.3mm 2.5mm;border-radius:0.8mm;">p.3</span>
+    </div>
+  </div>
 </div>
 
 </body>
