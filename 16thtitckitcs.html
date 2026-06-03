@@ -502,54 +502,75 @@
       <path d="M130 52 Q154 46 160 28" fill="none" stroke="#A0D8CE" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
 
       <!-- ══ TV/モニター ══ -->
-      <!-- ══ AIアイコン：データベース＋人頭シルエット＋回路 ══ -->
+      <!-- ══ AIアイコン：データベース×2＋人頭回路（ver.2） ══ -->
+      <defs>
+        <clipPath id="headClip">
+          <path d="M50 104 L50 91 Q46 87 45 81 Q44 68 57 64 Q62 63 65 65 Q70 60 74 63 Q78 68 76 78 Q75 84 72 89 L72 104 Z"/>
+        </clipPath>
+      </defs>
 
-      <!-- DBシリンダー左（後景） -->
-      <ellipse cx="46" cy="63" rx="10" ry="3.2" fill="#0B6858" stroke="#4ACFBA" stroke-width="1" opacity="0.75"/>
-      <rect x="36" y="63" width="20" height="22" fill="#0B6858" stroke="#4ACFBA" stroke-width="1" opacity="0.75"/>
-      <ellipse cx="46" cy="85" rx="10" ry="3.2" fill="#0D8A72" stroke="#4ACFBA" stroke-width="1" opacity="0.75"/>
-      <line x1="36" y1="70" x2="56" y2="70" stroke="#A0D8CE" stroke-width="0.8" opacity="0.5"/>
-      <line x1="36" y1="77" x2="56" y2="77" stroke="#A0D8CE" stroke-width="0.8" opacity="0.5"/>
+      <!-- DBシリンダー左（後景・大） -->
+      <ellipse cx="44" cy="60" rx="14" ry="4.5" fill="#0D8A72" opacity="0.8"/>
+      <rect x="30" y="60" width="28" height="34" fill="#0D8A72" opacity="0.8"/>
+      <ellipse cx="44" cy="94" rx="14" ry="4.5" fill="#0B6858" opacity="0.8"/>
+      <line x1="30" y1="69" x2="58" y2="69" stroke="#A0D8CE" stroke-width="1.2" opacity="0.55"/>
+      <line x1="30" y1="78" x2="58" y2="78" stroke="#A0D8CE" stroke-width="1.2" opacity="0.55"/>
+      <line x1="30" y1="87" x2="58" y2="87" stroke="#A0D8CE" stroke-width="1.2" opacity="0.45"/>
+      <circle cx="53" cy="69" r="1.5" fill="#A0D8CE" opacity="0.7"/>
+      <circle cx="53" cy="78" r="1.5" fill="#A0D8CE" opacity="0.7"/>
 
-      <!-- DBシリンダー右（後景） -->
-      <ellipse cx="72" cy="63" rx="10" ry="3.2" fill="#0B6858" stroke="#4ACFBA" stroke-width="1" opacity="0.75"/>
-      <rect x="62" y="63" width="20" height="22" fill="#0B6858" stroke="#4ACFBA" stroke-width="1" opacity="0.75"/>
-      <ellipse cx="72" cy="85" rx="10" ry="3.2" fill="#0D8A72" stroke="#4ACFBA" stroke-width="1" opacity="0.75"/>
-      <line x1="62" y1="70" x2="82" y2="70" stroke="#A0D8CE" stroke-width="0.8" opacity="0.5"/>
-      <line x1="62" y1="77" x2="82" y2="77" stroke="#A0D8CE" stroke-width="0.8" opacity="0.5"/>
+      <!-- DBシリンダー右（後景・大） -->
+      <ellipse cx="76" cy="63" rx="14" ry="4.5" fill="#0D8A72" opacity="0.8"/>
+      <rect x="62" y="63" width="28" height="34" fill="#0D8A72" opacity="0.8"/>
+      <ellipse cx="76" cy="97" rx="14" ry="4.5" fill="#0B6858" opacity="0.8"/>
+      <line x1="62" y1="72" x2="90" y2="72" stroke="#A0D8CE" stroke-width="1.2" opacity="0.55"/>
+      <line x1="62" y1="81" x2="90" y2="81" stroke="#A0D8CE" stroke-width="1.2" opacity="0.55"/>
+      <line x1="62" y1="90" x2="90" y2="90" stroke="#A0D8CE" stroke-width="1.2" opacity="0.45"/>
+      <circle cx="87" cy="72" r="1.5" fill="#A0D8CE" opacity="0.7"/>
+      <circle cx="87" cy="81" r="1.5" fill="#A0D8CE" opacity="0.7"/>
 
-      <!-- 人頭シルエット（前景） -->
-      <!-- 頭部 -->
-      <path d="M52 88 Q50 85 50 80 Q50 70 59 68 Q68 70 68 80 Q68 85 66 88 Q64 90 62 91 L62 95 L56 95 L56 91 Q54 90 52 88 Z"
-            fill="#0D7060" stroke="#4ACFBA" stroke-width="1.2" opacity="0.95"/>
-      <!-- 首・肩 -->
-      <rect x="56" y="95" width="6" height="4" fill="#0D7060" opacity="0.9"/>
-      <path d="M50 99 Q53 97 56 99 L56 103 L50 103 Z" fill="#0D7060" opacity="0.85"/>
-      <path d="M68 99 Q65 97 62 99 L62 103 L68 103 Z" fill="#0D7060" opacity="0.85"/>
+      <!-- 人頭シルエット（前景・側面） -->
+      <path d="M50 104 L50 91 Q46 87 45 81 Q44 68 57 64 Q62 63 65 65 Q70 60 74 63 Q78 68 76 78 Q75 84 72 89 L72 104 Z"
+            fill="#0B5C4A" opacity="0.97"/>
+      <!-- 首の強調 -->
+      <rect x="50" y="97" width="22" height="7" fill="#0B5C4A" opacity="0.97"/>
 
-      <!-- 回路パターン（頭内部） -->
-      <!-- 縦幹線 -->
-      <line x1="59" y1="71" x2="59" y2="86" stroke="#A0D8CE" stroke-width="1.2" opacity="0.9"/>
-      <!-- 横枝 -->
-      <line x1="59" y1="74" x2="54" y2="74" stroke="#A0D8CE" stroke-width="1" opacity="0.8"/>
-      <line x1="59" y1="74" x2="64" y2="74" stroke="#A0D8CE" stroke-width="1" opacity="0.8"/>
-      <line x1="59" y1="79" x2="54" y2="79" stroke="#A0D8CE" stroke-width="1" opacity="0.8"/>
-      <line x1="59" y1="79" x2="64" y2="79" stroke="#A0D8CE" stroke-width="1" opacity="0.8"/>
-      <line x1="59" y1="84" x2="55" y2="84" stroke="#A0D8CE" stroke-width="1" opacity="0.7"/>
-      <!-- L字ターン -->
-      <line x1="54" y1="74" x2="54" y2="77" stroke="#A0D8CE" stroke-width="1" opacity="0.7"/>
-      <line x1="64" y1="74" x2="64" y2="77" stroke="#A0D8CE" stroke-width="1" opacity="0.7"/>
-      <line x1="54" y1="79" x2="54" y2="82" stroke="#A0D8CE" stroke-width="1" opacity="0.7"/>
-      <line x1="64" y1="79" x2="64" y2="82" stroke="#A0D8CE" stroke-width="1" opacity="0.7"/>
-      <!-- ノード -->
-      <circle cx="59" cy="71" r="1.5" fill="#4ACFBA" opacity="0.95"/>
-      <circle cx="54" cy="74" r="1.5" fill="#4ACFBA" opacity="0.95"/>
-      <circle cx="64" cy="74" r="1.5" fill="#4ACFBA" opacity="0.95"/>
-      <circle cx="59" cy="79" r="1.8" fill="#6DDDCC" opacity="0.98"/>
-      <circle cx="54" cy="79" r="1.5" fill="#4ACFBA" opacity="0.9"/>
-      <circle cx="64" cy="79" r="1.5" fill="#4ACFBA" opacity="0.9"/>
-      <circle cx="55" cy="84" r="1.2" fill="#4ACFBA" opacity="0.85"/>
-      <circle cx="59" cy="86" r="1.5" fill="#4ACFBA" opacity="0.9"/>
+      <!-- 回路パターン（頭内部・白線） -->
+      <g clip-path="url(#headClip)">
+        <!-- 幹線（縦） -->
+        <line x1="59" y1="67" x2="59" y2="88" stroke="#A0D8CE" stroke-width="1.8" opacity="0.95"/>
+        <!-- 上部左右枝 -->
+        <line x1="59" y1="70" x2="53" y2="70" stroke="#A0D8CE" stroke-width="1.5" opacity="0.9"/>
+        <line x1="59" y1="70" x2="65" y2="70" stroke="#A0D8CE" stroke-width="1.5" opacity="0.9"/>
+        <!-- 上部枝の先端（L字） -->
+        <line x1="53" y1="70" x2="53" y2="74" stroke="#A0D8CE" stroke-width="1.5" opacity="0.85"/>
+        <line x1="65" y1="70" x2="65" y2="73" stroke="#A0D8CE" stroke-width="1.5" opacity="0.85"/>
+        <!-- 中部左右枝 -->
+        <line x1="59" y1="77" x2="52" y2="77" stroke="#A0D8CE" stroke-width="1.5" opacity="0.9"/>
+        <line x1="59" y1="77" x2="66" y2="77" stroke="#A0D8CE" stroke-width="1.5" opacity="0.9"/>
+        <!-- 中部枝の先端 -->
+        <line x1="52" y1="77" x2="52" y2="81" stroke="#A0D8CE" stroke-width="1.5" opacity="0.85"/>
+        <line x1="52" y1="81" x2="49" y2="81" stroke="#A0D8CE" stroke-width="1.5" opacity="0.8"/>
+        <line x1="66" y1="77" x2="66" y2="80" stroke="#A0D8CE" stroke-width="1.5" opacity="0.85"/>
+        <!-- 下部左枝 -->
+        <line x1="59" y1="84" x2="54" y2="84" stroke="#A0D8CE" stroke-width="1.5" opacity="0.85"/>
+        <line x1="54" y1="84" x2="54" y2="87" stroke="#A0D8CE" stroke-width="1.5" opacity="0.8"/>
+        <!-- ノード（白丸） -->
+        <circle cx="59" cy="67" r="2.2" fill="#A0D8CE" opacity="0.98"/>
+        <circle cx="53" cy="70" r="2" fill="#A0D8CE" opacity="0.95"/>
+        <circle cx="65" cy="70" r="2" fill="#A0D8CE" opacity="0.95"/>
+        <circle cx="53" cy="74" r="2" fill="#A0D8CE" opacity="0.9"/>
+        <circle cx="65" cy="73" r="2" fill="#A0D8CE" opacity="0.9"/>
+        <circle cx="59" cy="77" r="2.2" fill="#A0D8CE" opacity="0.98"/>
+        <circle cx="52" cy="77" r="2" fill="#A0D8CE" opacity="0.95"/>
+        <circle cx="66" cy="77" r="2" fill="#A0D8CE" opacity="0.95"/>
+        <circle cx="52" cy="81" r="2" fill="#A0D8CE" opacity="0.9"/>
+        <circle cx="49" cy="81" r="2" fill="#A0D8CE" opacity="0.85"/>
+        <circle cx="66" cy="80" r="2" fill="#A0D8CE" opacity="0.9"/>
+        <circle cx="54" cy="84" r="2" fill="#A0D8CE" opacity="0.9"/>
+        <circle cx="54" cy="87" r="2" fill="#A0D8CE" opacity="0.85"/>
+        <circle cx="59" cy="88" r="2.2" fill="#A0D8CE" opacity="0.95"/>
+      </g>
 
       <!-- 右モニター（大） -->
       <rect x="145" y="52" width="60" height="46" rx="3" fill="rgba(13,138,114,0.15)" stroke="#A0D8CE" stroke-width="2.5" opacity="0.9"/>
