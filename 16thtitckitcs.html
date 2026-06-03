@@ -33,6 +33,8 @@
     overflow-x: hidden;
     zoom: 0.7071;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
   }
   @media screen and (max-width: 1122px) {
     body { zoom: 1; }
@@ -388,6 +390,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: auto;
   }
   .footer-left {
     font-size: 12.5pt;
@@ -725,7 +728,8 @@
 
 <!-- ===== PAGE 2: 講演概要 ===== -->
 <div style="
-  display: block;
+  display: flex;
+  flex-direction: column;
   page-break-before: always;
   width: 297mm;
   min-height: 420mm;
@@ -793,7 +797,10 @@
 
   <!-- フッター -->
   <div style="
-    margin: auto -17mm -14mm;
+    margin-top: auto;
+    margin-left: -17mm;
+    margin-right: -17mm;
+    margin-bottom: -14mm;
     background: #1A2351;
     padding: 1mm 17mm;
     display: flex;
@@ -828,9 +835,7 @@
     <div style="font-size:13pt;font-weight:700;color:#fff;">第16回東京科学大学ITクラブ・蔵前ITコミュニティ合同セミナーフライア</div>
     <div style="font-size:11pt;color:#A0D8CE;font-family:'Space Mono',monospace;">URL：<a href="https://www.kuramae.ne.jp/files/user/KVS/20260706_第16回合同セミナ.pdf" style="color:#A0D8CE;">https://www.kuramae.ne.jp/files/user/KVS/20260706_第16回合同セミナ.pdf</a></div>
   </div>
-  <object data="16th-flyer.pdf" type="application/pdf" style="width:100%;height:410mm;display:block;" >
-    <p style="padding:10mm;font-size:14pt;color:#555;">PDFを表示できません。<a href="16th-flyer.pdf">こちらからダウンロード</a></p>
-  </object>
+  <img src="16th-flyer-1.png" style="width:100%;display:block;" alt="第16回TITC/KITC合同セミナーフライア">
 </div>
 
 </body>
