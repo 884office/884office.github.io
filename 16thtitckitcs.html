@@ -508,33 +508,32 @@
       <!-- モニタースタンド左 -->
       <line x1="59" y1="96" x2="56" y2="103" stroke="#A0D8CE" stroke-width="2" opacity="0.6"/>
       <line x1="56" y1="103" x2="63" y2="103" stroke="#A0D8CE" stroke-width="2" opacity="0.6"/>
-      <!-- 画面内容（ニューラルネット） -->
-      <!-- 入力層 -->
-      <circle cx="48" cy="74" r="1.8" fill="#6DDDCC" opacity="0.9"/>
-      <circle cx="48" cy="79" r="1.8" fill="#6DDDCC" opacity="0.9"/>
-      <circle cx="48" cy="84" r="1.8" fill="#6DDDCC" opacity="0.9"/>
-      <!-- 中間層 -->
-      <circle cx="57" cy="73" r="1.8" fill="#A0D8CE" opacity="0.85"/>
-      <circle cx="57" cy="78" r="2.2" fill="#4ACFBA" opacity="0.95"/>
-      <circle cx="57" cy="83" r="1.8" fill="#A0D8CE" opacity="0.85"/>
-      <circle cx="57" cy="88" r="1.8" fill="#A0D8CE" opacity="0.75"/>
-      <!-- 出力層 -->
-      <circle cx="66" cy="76" r="2" fill="#6DDDCC" opacity="0.9"/>
-      <circle cx="66" cy="84" r="2" fill="#6DDDCC" opacity="0.9"/>
-      <!-- 接続線（入力→中間） -->
-      <line x1="50" y1="74" x2="55" y2="73" stroke="#A0D8CE" stroke-width="0.7" opacity="0.5"/>
-      <line x1="50" y1="74" x2="55" y2="78" stroke="#4ACFBA" stroke-width="1" opacity="0.7"/>
-      <line x1="50" y1="79" x2="55" y2="73" stroke="#A0D8CE" stroke-width="0.7" opacity="0.4"/>
-      <line x1="50" y1="79" x2="55" y2="78" stroke="#4ACFBA" stroke-width="1" opacity="0.7"/>
-      <line x1="50" y1="79" x2="55" y2="83" stroke="#A0D8CE" stroke-width="0.7" opacity="0.5"/>
-      <line x1="50" y1="84" x2="55" y2="83" stroke="#A0D8CE" stroke-width="0.7" opacity="0.5"/>
-      <line x1="50" y1="84" x2="55" y2="88" stroke="#A0D8CE" stroke-width="0.7" opacity="0.4"/>
-      <!-- 接続線（中間→出力） -->
-      <line x1="59" y1="73" x2="64" y2="76" stroke="#A0D8CE" stroke-width="0.7" opacity="0.5"/>
-      <line x1="59" y1="78" x2="64" y2="76" stroke="#4ACFBA" stroke-width="1" opacity="0.7"/>
-      <line x1="59" y1="78" x2="64" y2="84" stroke="#4ACFBA" stroke-width="1" opacity="0.7"/>
-      <line x1="59" y1="83" x2="64" y2="84" stroke="#A0D8CE" stroke-width="0.7" opacity="0.5"/>
-      <line x1="59" y1="88" x2="64" y2="84" stroke="#A0D8CE" stroke-width="0.7" opacity="0.4"/>
+      <!-- 画面内容（人工知能：脳＋回路） -->
+      <!-- 脳シルエット（左半球） -->
+      <path d="M50 85 Q44 82 44 77 Q44 71 50 70 Q54 69 57 71 Q60 69 64 70 Q70 71 70 77 Q70 82 64 85 Q62 87 59 87 Q56 87 50 85 Z"
+            fill="rgba(13,138,114,0.15)" stroke="#4ACFBA" stroke-width="1.3" opacity="0.85"/>
+      <!-- 脳の溝ライン -->
+      <path d="M52 71 Q53 75 51 79" fill="none" stroke="#A0D8CE" stroke-width="0.8" opacity="0.7"/>
+      <path d="M57 70 Q58 74 56 78 Q55 81 57 84" fill="none" stroke="#A0D8CE" stroke-width="0.8" opacity="0.7"/>
+      <path d="M62 70 Q63 74 61 78" fill="none" stroke="#A0D8CE" stroke-width="0.8" opacity="0.7"/>
+      <path d="M66 72 Q67 76 65 80" fill="none" stroke="#A0D8CE" stroke-width="0.7" opacity="0.6"/>
+      <path d="M48 77 Q50 80 49 83" fill="none" stroke="#A0D8CE" stroke-width="0.7" opacity="0.6"/>
+      <!-- 回路ノード（脳の周囲） -->
+      <circle cx="44" cy="73" r="1.2" fill="#4ACFBA" opacity="0.9"/>
+      <circle cx="44" cy="80" r="1.2" fill="#6DDDCC" opacity="0.8"/>
+      <circle cx="70" cy="73" r="1.2" fill="#4ACFBA" opacity="0.9"/>
+      <circle cx="70" cy="80" r="1.2" fill="#6DDDCC" opacity="0.8"/>
+      <circle cx="57" cy="68" r="1.2" fill="#4ACFBA" opacity="0.9"/>
+      <circle cx="59" cy="88" r="1.2" fill="#6DDDCC" opacity="0.8"/>
+      <!-- 回路接続線 -->
+      <line x1="44" y1="73" x2="44" y2="80" stroke="#A0D8CE" stroke-width="0.8" opacity="0.5"/>
+      <line x1="70" y1="73" x2="70" y2="80" stroke="#A0D8CE" stroke-width="0.8" opacity="0.5"/>
+      <line x1="44" y1="73" x2="46" y2="71" stroke="#A0D8CE" stroke-width="0.8" opacity="0.5"/>
+      <line x1="70" y1="73" x2="68" y2="71" stroke="#A0D8CE" stroke-width="0.8" opacity="0.5"/>
+      <!-- 中央「AI」テキスト -->
+      <text x="59" y="80" text-anchor="middle" font-size="7" fill="#4ACFBA" font-family="monospace" font-weight="bold" opacity="0.95">AI</text>
+      <!-- パルスリング -->
+      <circle cx="59" cy="78" r="10" fill="none" stroke="#4ACFBA" stroke-width="0.6" stroke-dasharray="2 2" opacity="0.4"/>
 
       <!-- 右モニター（大） -->
       <rect x="145" y="52" width="60" height="46" rx="3" fill="rgba(13,138,114,0.15)" stroke="#A0D8CE" stroke-width="2.5" opacity="0.9"/>
