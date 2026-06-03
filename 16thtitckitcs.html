@@ -505,12 +505,33 @@
       <!-- モニタースタンド左 -->
       <line x1="59" y1="96" x2="56" y2="103" stroke="#A0D8CE" stroke-width="2" opacity="0.6"/>
       <line x1="56" y1="103" x2="63" y2="103" stroke="#A0D8CE" stroke-width="2" opacity="0.6"/>
-      <!-- 画面内容（周波数バー） -->
-      <rect x="46" y="82" width="4" height="5" rx="0.5" fill="#4ACFBA" opacity="0.6"/>
-      <rect x="52" y="78" width="4" height="9" rx="0.5" fill="#4ACFBA" opacity="0.8"/>
-      <rect x="58" y="75" width="4" height="12" rx="0.5" fill="#6DDDCC" opacity="0.9"/>
-      <rect x="64" y="79" width="4" height="8" rx="0.5" fill="#4ACFBA" opacity="0.7"/>
-      <rect x="70" y="83" width="4" height="4" rx="0.5" fill="#4ACFBA" opacity="0.5"/>
+      <!-- 画面内容（ニューラルネット） -->
+      <!-- 入力層 -->
+      <circle cx="48" cy="74" r="1.8" fill="#6DDDCC" opacity="0.9"/>
+      <circle cx="48" cy="79" r="1.8" fill="#6DDDCC" opacity="0.9"/>
+      <circle cx="48" cy="84" r="1.8" fill="#6DDDCC" opacity="0.9"/>
+      <!-- 中間層 -->
+      <circle cx="57" cy="73" r="1.8" fill="#A0D8CE" opacity="0.85"/>
+      <circle cx="57" cy="78" r="2.2" fill="#4ACFBA" opacity="0.95"/>
+      <circle cx="57" cy="83" r="1.8" fill="#A0D8CE" opacity="0.85"/>
+      <circle cx="57" cy="88" r="1.8" fill="#A0D8CE" opacity="0.75"/>
+      <!-- 出力層 -->
+      <circle cx="66" cy="76" r="2" fill="#6DDDCC" opacity="0.9"/>
+      <circle cx="66" cy="84" r="2" fill="#6DDDCC" opacity="0.9"/>
+      <!-- 接続線（入力→中間） -->
+      <line x1="50" y1="74" x2="55" y2="73" stroke="#A0D8CE" stroke-width="0.7" opacity="0.5"/>
+      <line x1="50" y1="74" x2="55" y2="78" stroke="#4ACFBA" stroke-width="1" opacity="0.7"/>
+      <line x1="50" y1="79" x2="55" y2="73" stroke="#A0D8CE" stroke-width="0.7" opacity="0.4"/>
+      <line x1="50" y1="79" x2="55" y2="78" stroke="#4ACFBA" stroke-width="1" opacity="0.7"/>
+      <line x1="50" y1="79" x2="55" y2="83" stroke="#A0D8CE" stroke-width="0.7" opacity="0.5"/>
+      <line x1="50" y1="84" x2="55" y2="83" stroke="#A0D8CE" stroke-width="0.7" opacity="0.5"/>
+      <line x1="50" y1="84" x2="55" y2="88" stroke="#A0D8CE" stroke-width="0.7" opacity="0.4"/>
+      <!-- 接続線（中間→出力） -->
+      <line x1="59" y1="73" x2="64" y2="76" stroke="#A0D8CE" stroke-width="0.7" opacity="0.5"/>
+      <line x1="59" y1="78" x2="64" y2="76" stroke="#4ACFBA" stroke-width="1" opacity="0.7"/>
+      <line x1="59" y1="78" x2="64" y2="84" stroke="#4ACFBA" stroke-width="1" opacity="0.7"/>
+      <line x1="59" y1="83" x2="64" y2="84" stroke="#A0D8CE" stroke-width="0.7" opacity="0.5"/>
+      <line x1="59" y1="88" x2="64" y2="84" stroke="#A0D8CE" stroke-width="0.7" opacity="0.4"/>
 
       <!-- 右モニター -->
       <rect x="148" y="68" width="38" height="28" rx="2.5" fill="rgba(13,138,114,0.15)" stroke="#A0D8CE" stroke-width="2.2" opacity="0.85"/>
@@ -518,13 +539,24 @@
       <!-- モニタースタンド右 -->
       <line x1="167" y1="96" x2="164" y2="103" stroke="#A0D8CE" stroke-width="2" opacity="0.6"/>
       <line x1="164" y1="103" x2="171" y2="103" stroke="#A0D8CE" stroke-width="2" opacity="0.6"/>
-      <!-- 画面内容（AIネットワーク） -->
-      <circle cx="163" cy="79" r="3" fill="none" stroke="#A0D8CE" stroke-width="1.5" opacity="0.7"/>
-      <circle cx="172" cy="75" r="2.5" fill="none" stroke="#6DDDCC" stroke-width="1.5" opacity="0.8"/>
-      <circle cx="179" cy="82" r="2.5" fill="none" stroke="#A0D8CE" stroke-width="1.5" opacity="0.7"/>
-      <line x1="166" y1="79" x2="170" y2="76" stroke="#A0D8CE" stroke-width="1.2" opacity="0.6"/>
-      <line x1="174" y1="77" x2="177" y2="81" stroke="#A0D8CE" stroke-width="1.2" opacity="0.6"/>
-      <line x1="164" y1="82" x2="162" y2="85" stroke="#6DDDCC" stroke-width="1.5" opacity="0.5" stroke-dasharray="1.5 1.5"/>
+      <!-- 画面内容（映像AI解析：人物検出ボックス） -->
+      <!-- 人物シルエット（棒人間風） -->
+      <circle cx="164" cy="75" r="2" fill="none" stroke="#6DDDCC" stroke-width="1.2" opacity="0.8"/>
+      <line x1="164" y1="77" x2="164" y2="84" stroke="#6DDDCC" stroke-width="1.2" opacity="0.8"/>
+      <line x1="161" y1="80" x2="167" y2="80" stroke="#6DDDCC" stroke-width="1.2" opacity="0.8"/>
+      <line x1="164" y1="84" x2="161" y2="88" stroke="#6DDDCC" stroke-width="1.2" opacity="0.7"/>
+      <line x1="164" y1="84" x2="167" y2="88" stroke="#6DDDCC" stroke-width="1.2" opacity="0.7"/>
+      <!-- 検出ボックス -->
+      <rect x="158" y="72" width="13" height="18" rx="0.5" fill="none" stroke="#4ACFBA" stroke-width="1.5" stroke-dasharray="2 1.5" opacity="0.9"/>
+      <!-- ラベル -->
+      <rect x="158" y="69.5" width="13" height="3" rx="0.5" fill="#4ACFBA" opacity="0.8"/>
+      <text x="164.5" y="72" text-anchor="middle" font-size="2.2" fill="#fff" font-family="monospace" font-weight="bold" opacity="0.95">PERSON</text>
+      <!-- スキャンライン -->
+      <line x1="152" y1="81" x2="183" y2="81" stroke="#A0D8CE" stroke-width="0.8" opacity="0.3"/>
+      <!-- 信頼度バー -->
+      <rect x="174" y="79" width="8" height="1.5" rx="0.5" fill="rgba(74,207,186,0.25)" opacity="0.8"/>
+      <rect x="174" y="79" width="6.5" height="1.5" rx="0.5" fill="#4ACFBA" opacity="0.85"/>
+      <text x="174" y="77.5" font-size="2.2" fill="#A0D8CE" font-family="monospace" opacity="0.8">AI 82%</text>
 
       <!-- ══ AIチップ（中央下） ══ -->
       <rect x="85" y="112" width="26" height="20" rx="2" fill="rgba(11,104,88,0.2)" stroke="#A0D8CE" stroke-width="2" opacity="0.8"/>
