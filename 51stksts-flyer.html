@@ -9,7 +9,7 @@
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Space+Mono:wght@400;700&display=swap');
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { width:182mm; min-height:257mm; margin:0 auto; font-family:'Noto Sans JP',sans-serif; background:#fff; color:#1a2a5e; }
-  .page { width:210mm; min-height:297mm; display:flex; flex-direction:column; }
+  .page { width:182mm; min-height:257mm; display:flex; flex-direction:column; }
 
   .header { background:#1a2a5e; padding:5mm 8mm 5mm; position:relative; overflow:hidden; }
   .header::after { content:''; position:absolute; bottom:0; left:0; right:0; height:1.2mm; background:linear-gradient(90deg,#0D8A72,#4A3FB5,#D85A30); }
@@ -853,10 +853,24 @@
   @media print {
     body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   }
+
+  .page-a4-wrapper {
+    width: 210mm;
+    height: 297mm;
+    overflow: hidden;
+    position: relative;
+  }
+  .page-a4-wrapper .page {
+    transform: scale(1.1538);
+    transform-origin: top left;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 </style>
 </head>
 <body>
-<div class="page">
+<div class="page-a4-wrapper"><div class="page">
 
   <!-- ヘッダー -->
   <div class="header">
@@ -1129,6 +1143,8 @@
     <span class="footer-left">蔵前工業会科学技術部会</span>
     <span class="footer-right">第51回 科学技術セミナー　2026.10.17</span>
   </div>
+
+</div>
 
 </div>
 
