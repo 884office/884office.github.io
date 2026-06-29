@@ -87,7 +87,7 @@
   .footer-right { color:#A0D8CE; font-family:'Space Mono',monospace; font-size:7.5pt; }
 
   /* === Page 2 styles === */
-400;500;700;900&family=Space+Mono:wght@400;700&display=swap');
+400;500;700;900&family=Space+Mono:wght@.page2 400;700&display=swap');
 
   :root {
     --navy:   #1A2351;
@@ -99,11 +99,7 @@
     --white:  #FFFFFF;
     --gray:   #6B7280;
     --lightgray: #E2E4EE;
-  }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  /* A3縦 = 297mm × 420mm */
+  }.page2 * { margin: 0; padding: 0; box-sizing: border-box; }.page2 /* A3縦 = 297mm × 420mm */
   
     body {
     width: 297mm;
@@ -116,39 +112,30 @@
     zoom: 0.7071;
     margin: 0 auto;
   }
-  @media screen and (max-width: 1122px) {
-    body { zoom: 1; }
-  }
-
-  /* ── ヘッダー帯 ── */
+  @media screen and (max-width: 1122px) {.page2 body { zoom: 1; }
+  }.page2 /* ── ヘッダー帯 ── */
   .header {
     background: var(--navy);
     padding: 6mm 12mm 4mm;
     position: relative;
     overflow: hidden;
-  }
-  .header::before {
+  }.page2 .header::before {
     content: none;
-  }
-  .header::after {
+  }.page2 .header::after {
     content: none;
-  }
-
-  .header-top {
+  }.page2 .header-top {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 2mm;
-  }
-  .seminar-label {
+  }.page2 .seminar-label {
     font-family: 'Space Mono', monospace;
     font-size: 11.5pt;
     color: rgba(255,255,255,0.45);
     letter-spacing: 0.2em;
     line-height: 1.6;
     margin-bottom: 2mm;
-  }
-  .seminar-no {
+  }.page2 .seminar-no {
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 28pt;
     font-weight: 900;
@@ -156,24 +143,19 @@
     letter-spacing: 0.03em;
     line-height: 1.1;
     margin-bottom: 2mm;
-  }
-  .organizer-block {
+  }.page2 .organizer-block {
     text-align: right;
-  }
-  .organizer-main {
+  }.page2 .organizer-main {
     font-size: 12.5pt;
     color: rgba(255,255,255,0.7);
     line-height: 1.7;
-  }
-  .organizer-main span {
+  }.page2 .organizer-main span {
     color: rgba(255,255,255,0.45);
     font-size: 11.5pt;
     display: grid;
     grid-template-columns: 1fr 72mm;
     gap: 5mm;
-  }
-
-  .main-title {
+  }.page2 .main-title {
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 38pt;
     font-weight: 700;
@@ -181,26 +163,21 @@
     line-height: 1.15;
     letter-spacing: 0.02em;
     margin-bottom: 1mm;
-  }
-  .main-title-sub {
+  }.page2 .main-title-sub {
     font-size: 26pt;
     font-weight: 500;
     letter-spacing: 0.02em;
-  }
-  .main-title .cross {
+  }.page2 .main-title .cross {
     color: var(--teal);
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 34pt;
     margin: 0 1mm;
-  }
-  .sub-title {
+  }.page2 .sub-title {
     font-size: 12pt;
     color: rgba(255,255,255,0.65);
     letter-spacing: 0.1em;
     font-weight: 300;
-  }
-
-  /* ── 日時・場所バナー ── */
+  }.page2 /* ── 日時・場所バナー ── */
   .info-banner {
     background: var(--teal);
     padding: 3mm 0 3mm 12mm;
@@ -208,20 +185,17 @@
     align-items: stretch;
     gap: 0;
     min-height: 22mm;
-  }
-  .info-date {
+  }.page2 .info-date {
     flex: 1.5;
     padding-right: 6mm;
     display: flex;
     flex-direction: column;
     justify-content: center;
-  }
-  .info-date-top {
+  }.page2 .info-date-top {
     display: flex;
     align-items: baseline;
     gap: 3mm;
-  }
-  .info-detail {
+  }.page2 .info-detail {
     flex: 2;
     padding: 0 6mm;
     border-left: 0.3mm solid rgba(255,255,255,0.3);
@@ -233,13 +207,11 @@
     color: var(--white);
     line-height: 1.3;
     font-weight: 400;
-  }
-  .info-detail strong {
+  }.page2 .info-detail strong {
     color: var(--white);
     font-weight: 700;
     font-size: 14.5pt;
-  }
-  .info-right {
+  }.page2 .info-right {
     flex: 0 0 auto;
     padding-left: 6mm;
     padding-right: 12mm;
@@ -251,46 +223,33 @@
     flex-direction: column;
     justify-content: center;
     gap: 0.5mm;
-  }
-
-  .date-big {
+  }.page2 .date-big {
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 32pt;
     font-weight: 700;
     color: var(--white);
     line-height: 1;
-  }
-  .date-label {
+  }.page2 .date-label {
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 14pt;
     color: rgba(255,255,255,0.85);
     font-weight: 500;
-  }
-  .date-sub {
+  }.page2 .date-sub {
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 13pt;
     color: var(--white);
     margin-top: 2mm;
     line-height: 1.7;
     font-weight: 400;
-  }
-  .date-sub strong {
+  }.page2 .date-sub strong {
     color: var(--white);
     font-weight: 700;
     font-size: 13pt;
-  }
-  .info-divider {
+  }.page2 .info-divider {
     width: 0.3mm;
     height: 10mm;
     background: rgba(255,255,255,0.35);
-  }
-
-
-
-
-
-
-  .info-right {
+  }.page2 .info-right {
     text-align: left;
     font-size: 12pt;
     color: rgba(255,255,255,0.95);
@@ -300,8 +259,7 @@
     flex-direction: column;
     justify-content: center;
     gap: 0.5mm;
-  }
-  .info-right strong {
+  }.page2 .info-right strong {
     color: var(--white);
     font-weight: 700;
     display: grid;
@@ -309,8 +267,7 @@
     gap: 5mm;
     font-size: 13pt;
     line-height: 1.3;
-  }
-  .info-right .info-right-label {
+  }.page2 .info-right .info-right-label {
     font-size: 9.5pt;
     color: rgba(255,255,255,0.65);
     font-family: 'Space Mono', monospace;
@@ -319,9 +276,7 @@
     grid-template-columns: 1fr 72mm;
     gap: 5mm;
     margin-bottom: 0;
-  }
-
-  /* ── 主催・共催バンド ── */
+  }.page2 /* ── 主催・共催バンド ── */
   .organizer-band {
     background: var(--white);
     border-bottom: 0.5mm solid var(--lightgray);
@@ -329,33 +284,26 @@
     display: flex;
     align-items: center;
     gap: 6mm;
-  }
-  .org-item {
+  }.page2 .org-item {
     display: flex;
     align-items: baseline;
     gap: 3mm;
-  }
-  .org-role {
+  }.page2 .org-role {
     font-size: 12.5pt;
     font-family: 'Space Mono', monospace;
     color: var(--teal);
     letter-spacing: 0.1em;
     font-weight: 700;
     white-space: nowrap;
-  }
-  .org-name {
+  }.page2 .org-name {
     font-size: 12.5pt;
     color: var(--navy);
     font-weight: 500;
     letter-spacing: 0.03em;
-  }
-  .org-sep {
+  }.page2 .org-sep {
     font-size: 12.5pt;
     color: var(--lightgray);
-  }
-
-
-  .info-right {
+  }.page2 .info-right {
     text-align: left;
     font-size: 12pt;
     color: rgba(255,255,255,0.95);
@@ -365,8 +313,7 @@
     flex-direction: column;
     justify-content: center;
     gap: 0.5mm;
-  }
-  .info-right strong {
+  }.page2 .info-right strong {
     color: var(--white);
     font-weight: 700;
     display: grid;
@@ -374,8 +321,7 @@
     gap: 5mm;
     font-size: 13pt;
     line-height: 1.3;
-  }
-  .info-right .info-right-label {
+  }.page2 .info-right .info-right-label {
     font-size: 9.5pt;
     color: rgba(255,255,255,0.65);
     font-family: 'Space Mono', monospace;
@@ -384,9 +330,7 @@
     grid-template-columns: 1fr 72mm;
     gap: 5mm;
     margin-bottom: 0;
-  }
-
-  /* ── 主催・共催バンド ── */
+  }.page2 /* ── 主催・共催バンド ── */
   .organizer-band {
     background: var(--white);
     border-bottom: 0.5mm solid var(--lightgray);
@@ -394,54 +338,40 @@
     display: flex;
     align-items: center;
     gap: 6mm;
-  }
-  .org-item { display: flex; align-items: baseline; gap: 3mm; }
-  .org-role {
+  }.page2 .org-item { display: flex; align-items: baseline; gap: 3mm; }.page2 .org-role {
     font-size: 12.5pt; font-family: 'Space Mono', monospace;
     color: var(--teal); letter-spacing: 0.1em; font-weight: 700; white-space: nowrap;
-  }
-  .org-name { font-size: 12.5pt; color: var(--navy); font-weight: 500; letter-spacing: 0.03em; }
-  .org-sep  { font-size: 12.5pt; color: var(--lightgray); }
-
-  /* ── テーマ帯 ── */
+  }.page2 .org-name { font-size: 12.5pt; color: var(--navy); font-weight: 500; letter-spacing: 0.03em; }.page2 .org-sep { font-size: 12.5pt; color: var(--lightgray); }.page2 /* ── テーマ帯 ── */
   .theme-band {
     background: var(--offwhite);
     padding: 2.5mm 12mm 2.5mm 9mm;
     border-left: 3mm solid var(--purple);
     margin: 0;
-  }
-  .theme-label {
+  }.page2 .theme-label {
     font-size: 12.5pt;
     color: var(--purple);
     letter-spacing: 0.2em;
     font-family: 'Space Mono', monospace;
     margin-bottom: 1.5mm;
-  }
-  .theme-text {
+  }.page2 .theme-text {
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 19pt;
     font-weight: 700;
     color: var(--navy);
     line-height: 1.3;
-  }
-  .theme-en {
+  }.page2 .theme-en {
     font-size: 12pt;
     color: var(--gray);
     margin-top: 1mm;
     font-weight: 300;
     letter-spacing: 0.08em;
-  }
-
-  /* ── 本体 ── */
+  }.page2 /* ── 本体 ── */
   .body-wrap {
     padding: 3mm 12mm;
     display: block;
     position: relative;
-  }
-
-  /* ── プログラム ── */
-  .program-section { }
-  .section-title {
+  }.page2 /* ── プログラム ── */
+  .program-section { }.page2 .section-title {
     font-size: 12.5pt;
     letter-spacing: 0.2em;
     color: var(--navy);
@@ -450,42 +380,27 @@
     display: flex;
     align-items: center;
     gap: 2mm;
-  }
-  .section-title::after {
+  }.page2 .section-title::after {
     content: '';
     flex: 1;
     height: 0.3mm;
     background: var(--lightgray);
-  }
-
-  .program-list { display: flex; flex-direction: column; gap: 1.5mm; }
-
-  .program-item {
+  }.page2 .program-list { display: flex; flex-direction: column; gap: 1.5mm; }.page2 .program-item {
     display: grid;
     grid-template-columns: 20mm 1fr;
     gap: 1.5mm;
     align-items: start;
-  }
-  .prog-time {
+  }.page2 .prog-time {
     font-family: 'Space Mono', monospace;
     font-size: 12.5pt;
     color: var(--gray);
     padding-top: 1mm;
     line-height: 1.4;
-  }
-  .prog-content {
+  }.page2 .prog-content {
     border-left: 2px solid var(--lightgray);
     padding-left: 3mm;
     padding-bottom: 0.5mm;
-  }
-  .prog-content.lecture-1 { border-color: var(--purple); }
-  .prog-content.lecture-2 { border-color: var(--coral); }
-  .prog-content.lecture-3 { border-color: var(--purple); }
-  .prog-content.lecture-4 { border-color: var(--teal); }
-  .prog-content.panel     { border-color: var(--coral); }
-  .prog-content.event     { border-color: var(--lightgray); }
-
-  .prog-tag {
+  }.page2 .prog-content.lecture-1 { border-color: var(--purple); }.page2 .prog-content.lecture-2 { border-color: var(--coral); }.page2 .prog-content.lecture-3 { border-color: var(--purple); }.page2 .prog-content.lecture-4 { border-color: var(--teal); }.page2 .prog-content.panel { border-color: var(--coral); }.page2 .prog-content.event { border-color: var(--lightgray); }.page2 .prog-tag {
     font-size: 12.5pt;
     font-family: 'Space Mono', monospace;
     letter-spacing: 0.1em;
@@ -494,90 +409,66 @@
     display: inline-block;
     margin-bottom: 1.5mm;
     font-weight: 700;
-  }
-  .tag-lecture-1 { background: rgba(74,63,181,0.1); color: var(--purple); }
-  .tag-lecture-2 { background: rgba(216,90,48,0.12); color: var(--coral); }
-  .tag-lecture-3 { background: rgba(74,63,181,0.12); color: var(--purple); }
-  .tag-lecture-4 { background: rgba(13,138,114,0.12); color: var(--teal); }
-  .tag-panel     { background: rgba(216,90,48,0.12); color: var(--coral); }
-  .tag-opening   { background: var(--lightgray); color: var(--gray); }
-
-  .prog-speaker {
+  }.page2 .tag-lecture-1 { background: rgba(74,63,181,0.1); color: var(--purple); }.page2 .tag-lecture-2 { background: rgba(216,90,48,0.12); color: var(--coral); }.page2 .tag-lecture-3 { background: rgba(74,63,181,0.12); color: var(--purple); }.page2 .tag-lecture-4 { background: rgba(13,138,114,0.12); color: var(--teal); }.page2 .tag-panel { background: rgba(216,90,48,0.12); color: var(--coral); }.page2 .tag-opening { background: var(--lightgray); color: var(--gray); }.page2 .prog-speaker {
     font-size: 15pt;
     font-weight: 700;
     color: var(--navy);
     line-height: 1.3;
     margin-bottom: 0.8mm;
-  }
-  .prog-affil {
+  }.page2 .prog-affil {
     font-size: 12.5pt;
     color: var(--gray);
     line-height: 1.4;
     margin-bottom: 0.5mm;
-  }
-  .prog-topic {
+  }.page2 .prog-topic {
     font-size: 11.5pt;
     color: var(--navy);
     line-height: 1.5;
     font-weight: 400;
-  }
-  .prog-topic em {
+  }.page2 .prog-topic em {
     font-style: normal;
     color: var(--purple);
     font-weight: 500;
-  }
-  .prog-simple {
+  }.page2 .prog-simple {
     font-size: 11.5pt;
     color: var(--gray);
     line-height: 1.5;
-  }
-
-  /* ── 右サイドバー ── */
-  .sidebar { display: flex; flex-direction: column; gap: 3mm; width: 100%; overflow: hidden; }
-
-  /* 参加情報 */
+  }.page2 /* ── 右サイドバー ── */
+  .sidebar { display: flex; flex-direction: column; gap: 3mm; width: 100%; overflow: hidden; }.page2 /* 参加情報 */
   .info-card {
     background: var(--navy);
     border-radius: 3mm;
     padding: 3mm;
     color: var(--white);
-  }
-  .info-card-title {
+  }.page2 .info-card-title {
     font-size: 12.5pt;
     letter-spacing: 0.2em;
     font-family: 'Space Mono', monospace;
     color: var(--teal);
     margin-bottom: 2mm;
-  }
-  .info-row {
+  }.page2 .info-row {
     display: flex;
     gap: 2.5mm;
     align-items: flex-start;
     margin-bottom: 3mm;
-  }
-  .info-icon {
+  }.page2 .info-icon {
     font-size: 11.5pt;
     color: var(--teal);
     width: 4mm;
     flex-shrink: 0;
     padding-top: 0.5mm;
-  }
-  .info-row-content { flex: 1; }
-  .info-row-label {
+  }.page2 .info-row-content { flex: 1; }.page2 .info-row-label {
     font-size: 11.5pt;
     color: rgba(255,255,255,0.45);
     letter-spacing: 0.1em;
     margin-bottom: 0.8mm;
     font-family: 'Space Mono', monospace;
-  }
-  .info-row-value {
+  }.page2 .info-row-value {
     font-size: 11.5pt;
     color: var(--white);
     line-height: 1.6;
     font-weight: 400;
-  }
-  .info-row-value strong { color: #A0D8CE; font-weight: 700; }
-  .hybrid-badge {
+  }.page2 .info-row-value strong { color: #A0D8CE; font-weight: 700; }.page2 .hybrid-badge {
     display: inline-block;
     font-size: 11.5pt;
     background: rgba(13,138,114,0.3);
@@ -586,33 +477,27 @@
     border-radius: 1mm;
     font-family: 'Space Mono', monospace;
     margin-top: 1mm;
-  }
-
-  /* セミナーの3軸 */
+  }.page2 /* セミナーの3軸 */
   .axes-card {
     background: #EBF6F4;
     border-radius: 0;
     padding: 1.5mm 3mm;
     box-sizing: border-box;
     width: 100%;
-  }
-  .axes-card-title {
+  }.page2 .axes-card-title {
     font-size: 12.5pt;
     letter-spacing: 0.2em;
     font-family: 'Space Mono', monospace;
     color: var(--navy);
     margin-bottom: 1mm;
-  }
-  .axis-item {
+  }.page2 .axis-item {
     display: flex;
     gap: 2.5mm;
     align-items: flex-start;
     margin-bottom: 0.8mm;
     padding-bottom: 0.8mm;
     border-bottom: 0.3mm solid var(--lightgray);
-  }
-  .axis-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-  .axis-num {
+  }.page2 .axis-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }.page2 .axis-num {
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 15pt;
     font-weight: 900;
@@ -621,26 +506,16 @@
     width: 6mm;
     text-align: center;
     padding-top: 0.3mm;
-  }
-  .axis-num.c1 { color: var(--purple); }
-  .axis-num.c2 { color: var(--teal); }
-  .axis-num.c3 { color: var(--coral); }
-  .axis-body {}
-  .axis-label {
+  }.page2 .axis-num.c1 { color: var(--purple); }.page2 .axis-num.c2 { color: var(--teal); }.page2 .axis-num.c3 { color: var(--coral); }.page2 .axis-body {}.page2 .axis-label {
     font-size: 12pt;
     font-weight: 700;
     color: var(--navy);
     margin-bottom: 0.3mm;
-  }
-  .axis-desc {
+  }.page2 .axis-desc {
     font-size: 9.5pt;
     color: var(--gray);
     line-height: 1.35;
-  }
-
-
-
-  /* ── REGISTRATIONカード ── */
+  }.page2 /* ── REGISTRATIONカード ── */
   .reg-card {
     background: var(--teal);
     border-radius: 0;
@@ -652,8 +527,7 @@
     align-items: center;
     gap: 8mm;
     position: relative;
-  }
-  .reg-card::before {
+  }.page2 .reg-card::before {
     content: '';
     position: absolute;
     top: 0;
@@ -662,8 +536,7 @@
     height: 0.7mm;
     background: linear-gradient(to right, var(--navy) 60%, var(--coral) 100%);
     z-index: 2;
-  }
-  .reg-card::after {
+  }.page2 .reg-card::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -672,8 +545,7 @@
     height: 1.5mm;
     background: linear-gradient(to right, var(--navy) 60%, var(--coral) 100%);
     z-index: 2;
-  }
-  .reg-card-title {
+  }.page2 .reg-card-title {
     font-size: 12.5pt;
     font-family: 'Space Mono', monospace;
     color: rgba(255,255,255,0.65);
@@ -681,33 +553,27 @@
     font-weight: 700;
     white-space: nowrap;
     flex-shrink: 0;
-  }
-  .reg-card-body {
+  }.page2 .reg-card-body {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 6mm;
     flex: 1;
-  }
-  .reg-card-text {
+  }.page2 .reg-card-text {
     font-size: 13pt;
     color: var(--white);
     line-height: 1.3;
-  }
-  .reg-link {
+  }.page2 .reg-link {
     color: var(--white);
     text-decoration: none;
     font-size: 12pt;
     font-weight: 700;
     word-break: break-all;
-  }
-  .reg-card-deadline {
+  }.page2 .reg-card-deadline {
     font-size: 13pt;
     font-weight: 700;
     color: rgba(255,255,255,0.8);
-  }
-
-  /* ── フッター ── */
+  }.page2 /* ── フッター ── */
   .footer {
     margin-top: auto;
     background: var(--navy);
@@ -716,20 +582,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  .footer-left {
+  }.page2 .footer-left {
     font-size: 12.5pt;
     color: rgba(255,255,255,0.75);
     line-height: 1.4;
-  }
-  .footer-left strong { color: var(--white); }
-  .footer-right {
+  }.page2 .footer-left strong { color: var(--white); }.page2 .footer-right {
     text-align: right;
     font-size: 12.5pt;
     color: rgba(255,255,255,0.75);
     line-height: 1.4;
-  }
-  .footer-logo {
+  }.page2 .footer-logo {
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: 700;
     font-size: 13pt;
@@ -738,75 +600,61 @@
     grid-template-columns: 1fr 72mm;
     gap: 5mm;
     margin-bottom: 0.5mm;
-  }
-
-  /* ── 参加費・情報バンド ── */
+  }.page2 /* ── 参加費・情報バンド ── */
   .fee-band {
     background: var(--navy);
     padding: 2mm 12mm;
     display: flex;
     align-items: center;
     gap: 8mm;
-  }
-  .fee-item {
+  }.page2 .fee-item {
     display: flex;
     align-items: baseline;
     gap: 3mm;
-  }
-  .fee-label {
+  }.page2 .fee-label {
     font-size: 12.5pt;
     font-family: 'Space Mono', monospace;
     color: var(--teal);
     letter-spacing: 0.1em;
     white-space: nowrap;
     font-weight: 700;
-  }
-  .fee-value {
+  }.page2 .fee-value {
     font-size: 12pt;
     color: var(--white);
     line-height: 1.5;
-  }
-  .fee-sub {
+  }.page2 .fee-sub {
     display: flex;
     flex-direction: column;
     gap: 1.5mm;
-  }
-  .fee-sub-item {
+  }.page2 .fee-sub-item {
     display: flex;
     align-items: baseline;
     gap: 3mm;
-  }
-  .fee-sub-label {
+  }.page2 .fee-sub-label {
     font-size: 12pt;
     font-family: 'Space Mono', monospace;
     color: rgba(255,255,255,0.6);
     letter-spacing: 0.05em;
     white-space: nowrap;
     min-width: 14mm;
-  }
-  .fee-sub-value {
+  }.page2 .fee-sub-value {
     font-size: 12.5pt;
     color: var(--white);
     font-weight: 500;
-  }
-  .fee-sub-value em {
+  }.page2 .fee-sub-value em {
     font-style: normal;
     color: rgba(255,255,255,0.55);
     font-size: 12.5pt;
     font-weight: 400;
-  }
-  .fee-value em {
+  }.page2 .fee-value em {
     font-style: normal;
     color: rgba(255,255,255,0.55);
     font-size: 12.5pt;
-  }
-  .fee-divider {
+  }.page2 .fee-divider {
     width: 0.3mm;
     height: 8mm;
     background: rgba(255,255,255,0.2);
-  }
-
-  /* ── 情報フッター ── */
+  }.page2 /* ── 情報フッター ── */
   .info-footer {
     background: var(--offwhite);
     border-top: 0.3mm solid var(--lightgray);
@@ -814,44 +662,36 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 1mm;
-  }
-  .info-footer-block { }
-  .info-footer-label {
+  }.page2 .info-footer-block { }.page2 .info-footer-label {
     font-size: 11pt;
     font-family: 'Space Mono', monospace;
     color: var(--teal);
     letter-spacing: 0.15em;
     margin-bottom: 0.3mm;
     font-weight: 700;
-  }
-  .info-footer-text {
+  }.page2 .info-footer-text {
     font-size: 11pt;
     color: var(--gray);
     line-height: 1.4;
-  }
-  .info-footer-text a {
+  }.page2 .info-footer-text a {
     color: var(--navy);
     text-decoration: none;
     font-weight: 500;
     word-break: break-all;
     font-size: 11pt;
-  }
-  .info-footer-note {
+  }.page2 .info-footer-note {
     font-size: 10pt;
     color: var(--gray);
     margin-top: 0;
     opacity: 0.7;
-  }
-
-  /* 区切りライン（グラデーション） */
+  }.page2 /* 区切りライン（グラデーション） */
   .grad-line {
     height: 0.8mm;
     background: linear-gradient(90deg, var(--teal) 0%, var(--purple) 50%, var(--coral) 100%);
     margin: 0;
   }
 
-  @media print {
-    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  @media print {.page2 body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   }
 </style>
 </head>
@@ -1132,7 +972,7 @@
 
 </div>
 
-<div style="
+<div class="page2" style="
   display: block;
   page-break-before: always;
   width: 297mm;
