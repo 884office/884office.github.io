@@ -8,83 +8,83 @@
   @page { size: A4 portrait; margin: 0; }
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Space+Mono:wght@400;700&display=swap');
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { width:182mm; min-height:257mm; margin:0 auto; font-family:'Noto Sans JP',sans-serif; background:#fff; color:#1a2a5e; }
-  .page { width:182mm; min-height:257mm; display:flex; flex-direction:column; }
+  body { width:210.0mm; min-height:296.5mm; margin:0 auto; font-family:'Noto Sans JP',sans-serif; background:#fff; color:#1a2a5e; }
+  .page { width:210mm; min-height:297mm; display:flex; flex-direction:column; }
 
-  .header { background:#1a2a5e; padding:5mm 8mm 5mm; position:relative; overflow:hidden; }
-  .header::after { content:''; position:absolute; bottom:0; left:0; right:0; height:1.2mm; background:linear-gradient(90deg,#0D8A72,#4A3FB5,#D85A30); }
-  .header-svg { position:absolute; top:5mm; right:15mm; width:65mm; opacity:0.9; }
-  .seminar-label { font-size:9.5pt; color:#A0D8CE; font-family:'Space Mono',monospace; letter-spacing:0.1em; margin-bottom:2mm; }
-  .seminar-no { font-size:17pt; font-weight:900; color:#fff; letter-spacing:0.05em; margin-bottom:2mm; }
-  .main-title { font-size:24pt; font-weight:900; color:#fff; line-height:1.2; padding-right:40mm; }
-  .main-title-sub { font-size:14pt; font-weight:700; color:rgba(255,255,255,0.8); display:block; margin-top:2mm; }
+  .header { background:#1a2a5e; padding:6.0mm 9.0mm 6.0mm; position:relative; overflow:hidden; }
+  .header::after { content:''; position:absolute; bottom:0; left:0; right:0; height:1.5mm; background:linear-gradient(90deg,#0D8A72,#4A3FB5,#D85A30); }
+  .header-svg { position:absolute; top:6.0mm; right:17.5mm; width:75.0mm; opacity:0.9; }
+  .seminar-label { font-size:11.0pt; color:#A0D8CE; font-family:'Space Mono',monospace; letter-spacing:0.1em; margin-bottom:2.5mm; }
+  .seminar-no { font-size:19.6pt; font-weight:900; color:#fff; letter-spacing:0.05em; margin-bottom:2.5mm; }
+  .main-title { font-size:27.7pt; font-weight:900; color:#fff; line-height:1.2; padding-right:46.0mm; }
+  .main-title-sub { font-size:16.2pt; font-weight:700; color:rgba(255,255,255,0.8); display:block; margin-top:2.5mm; }
 
-  .organizer-band { background:#fff; padding:1mm 8mm; display:flex; align-items:center; justify-content:center; gap:10mm; font-size:10pt; border-bottom:0.3mm solid #dde; }
-  .org-item { display:flex; align-items:center; gap:3.5mm; }
-  .org-role { color:#0D8A72; font-weight:700; font-family:'Space Mono',monospace; font-size:10pt; letter-spacing:0.1em; flex-shrink:0; margin-top:1.5mm; }
+  .organizer-band { background:#fff; padding:1.0mm 9.0mm; display:flex; align-items:center; justify-content:center; gap:11.5mm; font-size:11.5pt; border-bottom:0.3mm solid #dde; }
+  .org-item { display:flex; align-items:center; gap:4.0mm; }
+  .org-role { color:#0D8A72; font-weight:700; font-family:'Space Mono',monospace; font-size:11.5pt; letter-spacing:0.1em; flex-shrink:0; margin-top:1.5mm; }
   .org-name { color:#1a2a5e; font-weight:500; }
-  .org-sep { color:#bbb; margin:0 1mm; }
+  .org-sep { color:#bbb; margin:0 1.0mm; }
 
-  .date-band { background:#0D3060; padding:2.5mm 8mm; display:flex; align-items:center; gap:5mm; }
-  .date-main { font-size:18pt; font-weight:900; color:#fff; flex-shrink:0; }
-  .date-sat { font-size:12pt; font-weight:700; color:#A0D8CE; margin-right:2mm; }
-  .date-detail { font-size:13pt; color:rgba(255,255,255,0.85); line-height:1.3; white-space:nowrap; }
-  .date-detail strong { color:#fff; font-weight:700; font-size:14pt; }
+  .date-band { background:#0D3060; padding:3.0mm 9.0mm; display:flex; align-items:center; gap:6.0mm; }
+  .date-main { font-size:20.8pt; font-weight:900; color:#fff; flex-shrink:0; }
+  .date-sat { font-size:13.8pt; font-weight:700; color:#A0D8CE; margin-right:2.5mm; }
+  .date-detail { font-size:15.0pt; color:rgba(255,255,255,0.85); line-height:1.3; white-space:nowrap; }
+  .date-detail strong { color:#fff; font-weight:700; font-size:16.2pt; }
 
-  .venue-band { background:#0D8A72; padding:1.5mm 8mm; font-size:13pt; color:#fff; line-height:1.6; }
+  .venue-band { background:#0D8A72; padding:1.5mm 9.0mm; font-size:15.0pt; color:#fff; line-height:1.6; }
 
-  .theme-band { background:#EBF6F4; padding:1.5mm 8mm; font-size:13pt; color:#1a2a5e; font-weight:700; border-left:2.5mm solid #0D8A72; margin:0; }
+  .theme-band { background:#EBF6F4; padding:1.5mm 9.0mm; font-size:15.0pt; color:#1a2a5e; font-weight:700; border-left:3.0mm solid #0D8A72; margin:0; }
 
-  .speakers-section { padding:2mm 0 1.5mm; flex:1; display:flex; flex-direction:column; }
-  .section-header { font-size:9pt; font-family:'Space Mono',monospace; color:#0D8A72; letter-spacing:0.2em; font-weight:700; margin-bottom:2mm; padding:0 8mm 1mm; border-bottom:0.3mm solid #dde; }
-  .lecture-list { display:flex; flex-direction:column; gap:0; padding:0 8mm; flex:1; }
-  .lecture-row { display:flex; align-items:center; gap:3mm; padding:2.5mm 0; border-bottom:0.3mm solid #dde; }
+  .speakers-section { padding:2.5mm 0 1.5mm; flex:1; display:flex; flex-direction:column; }
+  .section-header { font-size:10.4pt; font-family:'Space Mono',monospace; color:#0D8A72; letter-spacing:0.2em; font-weight:700; margin-bottom:2.5mm; padding:0 9.0mm 1.0mm; border-bottom:0.3mm solid #dde; }
+  .lecture-list { display:flex; flex-direction:column; gap:0; padding:0 9.0mm; flex:1; }
+  .lecture-row { display:flex; align-items:center; gap:3.5mm; padding:3.0mm 0; border-bottom:0.3mm solid #dde; }
   .lecture-row:last-child { border-bottom:none; }
   .lec-body { flex:1; min-width:0; }
-  .lec-meta { display:flex; align-items:baseline; gap:2mm; flex-wrap:wrap; margin-bottom:1mm; }
-  .lec-name { font-size:13pt; font-weight:700; color:#1a2a5e; }
-  .lec-affil { font-size:10pt; color:#555; }
-  .lec-topic { font-size:12pt; font-weight:700; color:#1a2a5e; line-height:1.3; }
-  .speaker-card { border:0.3mm solid #dde; border-radius:1.5mm; padding:2.5mm; background:#f8f9ff; display:flex; flex-direction:column; }
-  .speaker-header { display:flex; align-items:center; gap:2.5mm; margin-bottom:1.5mm; }
-  .speaker-photo { width:14mm; height:14mm; object-fit:cover; object-position:top; border-radius:1mm; flex-shrink:0; }
-  .speaker-tag { display:inline-block; font-size:7.5pt; font-weight:700; color:#fff; padding:0.3mm 1.8mm; border-radius:0.8mm; margin-bottom:0.8mm; }
-  .speaker-name { font-size:12pt; font-weight:700; color:#1a2a5e; line-height:1.2; }
-  .speaker-affil { font-size:9pt; color:#555; line-height:1.3; margin-top:0.5mm; }
-  .speaker-topic { font-size:11pt; font-weight:700; color:#1a2a5e; line-height:1.4; padding-top:2mm; border-top:0.3mm solid #dde; margin-top:auto; }
+  .lec-meta { display:flex; align-items:baseline; gap:2.5mm; flex-wrap:wrap; margin-bottom:1.0mm; }
+  .lec-name { font-size:15.0pt; font-weight:700; color:#1a2a5e; }
+  .lec-affil { font-size:11.5pt; color:#555; }
+  .lec-topic { font-size:13.8pt; font-weight:700; color:#1a2a5e; line-height:1.3; }
+  .speaker-card { border:0.3mm solid #dde; border-radius:1.5mm; padding:3.0mm; background:#f8f9ff; display:flex; flex-direction:column; }
+  .speaker-header { display:flex; align-items:center; gap:3.0mm; margin-bottom:1.5mm; }
+  .speaker-photo { width:16.0mm; height:16.0mm; object-fit:cover; object-position:top; border-radius:1.0mm; flex-shrink:0; }
+  .speaker-tag { display:inline-block; font-size:8.7pt; font-weight:700; color:#fff; padding:0.3mm 2.0mm; border-radius:0.8mm; margin-bottom:0.8mm; }
+  .speaker-name { font-size:13.8pt; font-weight:700; color:#1a2a5e; line-height:1.2; }
+  .speaker-affil { font-size:10.4pt; color:#555; line-height:1.3; margin-top:0.5mm; }
+  .speaker-topic { font-size:12.7pt; font-weight:700; color:#1a2a5e; line-height:1.4; padding-top:2.5mm; border-top:0.3mm solid #dde; margin-top:auto; }
 
-  .panel-box { border:0.5mm solid rgba(216,90,48,0.3); border-radius:1.5mm; padding:2mm 4mm; display:flex; align-items:center; gap:3mm; background:rgba(216,90,48,0.05); margin:0 8mm; }
-  .panel-tag { background:rgba(216,90,48,0.12); color:#D85A30; font-size:8.5pt; font-weight:700; padding:0.8mm 2.5mm; border-radius:0.8mm; flex-shrink:0; font-family:'Space Mono',monospace; letter-spacing:0.05em; border:0.3mm solid rgba(216,90,48,0.3); }
+  .panel-box { border:0.5mm solid rgba(216,90,48,0.3); border-radius:1.5mm; padding:2.5mm 4.5mm; display:flex; align-items:center; gap:3.5mm; background:rgba(216,90,48,0.05); margin:0 9.0mm; }
+  .panel-tag { background:rgba(216,90,48,0.12); color:#D85A30; font-size:9.8pt; font-weight:700; padding:0.8mm 3.0mm; border-radius:0.8mm; flex-shrink:0; font-family:'Space Mono',monospace; letter-spacing:0.05em; border:0.3mm solid rgba(216,90,48,0.3); }
   .panel-content { }
-  .panel-time { font-size:8pt; color:#888; margin-bottom:0.5mm; font-family:'Space Mono',monospace; }
-  .panel-topic { font-size:10pt; font-weight:700; color:#1a2a5e; }
+  .panel-time { font-size:9.2pt; color:#888; margin-bottom:0.5mm; font-family:'Space Mono',monospace; }
+  .panel-topic { font-size:11.5pt; font-weight:700; color:#1a2a5e; }
 
-  .axes-section { margin:0 0 1.5mm; background:#EBF6F4; padding:1.5mm 8mm; border-radius:0; }
-  .axes-title { font-size:8pt; font-family:'Space Mono',monospace; color:#0D8A72; letter-spacing:0.15em; font-weight:700; margin-bottom:1.5mm; }
-  .axes-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:2mm; }
+  .axes-section { margin:0 0 1.5mm; background:#EBF6F4; padding:1.5mm 9.0mm; border-radius:0; }
+  .axes-title { font-size:9.2pt; font-family:'Space Mono',monospace; color:#0D8A72; letter-spacing:0.15em; font-weight:700; margin-bottom:1.5mm; }
+  .axes-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:2.5mm; }
   .axis-item { display:flex; flex-direction:column; }
   .axis-header { display:flex; align-items:baseline; gap:1.5mm; margin-bottom:0.3mm; }
-  .axis-num { font-size:10pt; font-weight:900; line-height:1; flex-shrink:0; }
-  .axis-label { font-size:9pt; font-weight:700; color:#1a2a5e; }
-  .axis-desc { font-size:8pt; color:#555; line-height:1.35; }
+  .axis-num { font-size:11.5pt; font-weight:900; line-height:1; flex-shrink:0; }
+  .axis-label { font-size:10.4pt; font-weight:700; color:#1a2a5e; }
+  .axis-desc { font-size:9.2pt; color:#555; line-height:1.35; }
 
-  .bottom-section { padding:1.5mm 8mm; display:flex; gap:3mm; }
+  .bottom-section { padding:1.5mm 9.0mm; display:flex; gap:3.5mm; }
   .latest-info { flex:1; }
-  .info-label { font-size:7.5pt; font-family:'Space Mono',monospace; color:#0D8A72; letter-spacing:0.15em; font-weight:700; margin-bottom:0.5mm; }
-  .info-note { font-size:7pt; color:#666; margin-bottom:0.5mm; }
-  .info-url { font-size:7pt; color:#1a2a5e; font-weight:500; word-break:break-all; }
+  .info-label { font-size:8.7pt; font-family:'Space Mono',monospace; color:#0D8A72; letter-spacing:0.15em; font-weight:700; margin-bottom:0.5mm; }
+  .info-note { font-size:8.1pt; color:#666; margin-bottom:0.5mm; }
+  .info-url { font-size:8.1pt; color:#1a2a5e; font-weight:500; word-break:break-all; }
 
-  .reg-box { background:#1a2a5e; padding:1.5mm 8mm; display:flex; align-items:center; gap:3mm; }
+  .reg-box { background:#1a2a5e; padding:1.5mm 9.0mm; display:flex; align-items:center; gap:3.5mm; }
   .reg-info { flex:1; }
-  .reg-label { font-size:7.5pt; font-family:'Space Mono',monospace; color:#A0D8CE; letter-spacing:0.15em; font-weight:700; margin-bottom:0.5mm; }
-  .reg-fee { font-size:12pt; color:#A0D8CE; line-height:1.4; margin-bottom:0.5mm; }
-  .reg-url { font-size:12pt; color:#A0D8CE; line-height:1.4; word-break:break-all; }
-  .reg-deadline { font-size:7pt; color:rgba(255,255,255,0.6); margin-top:0.3mm; }
-  .qr-img { width:20mm; height:20mm; flex-shrink:0; }
+  .reg-label { font-size:8.7pt; font-family:'Space Mono',monospace; color:#A0D8CE; letter-spacing:0.15em; font-weight:700; margin-bottom:0.5mm; }
+  .reg-fee { font-size:13.8pt; color:#A0D8CE; line-height:1.4; margin-bottom:0.5mm; }
+  .reg-url { font-size:13.8pt; color:#A0D8CE; line-height:1.4; word-break:break-all; }
+  .reg-deadline { font-size:8.1pt; color:rgba(255,255,255,0.6); margin-top:0.3mm; }
+  .qr-img { width:23.0mm; height:23.0mm; flex-shrink:0; }
 
-  .footer { background:#162040; padding:1mm 8mm; display:flex; justify-content:space-between; align-items:center; font-size:7pt; }
+  .footer { background:#162040; padding:1.0mm 9.0mm; display:flex; justify-content:space-between; align-items:center; font-size:8.1pt; }
   .footer-left { color:rgba(255,255,255,0.85); }
-  .footer-right { color:#A0D8CE; font-family:'Space Mono',monospace; font-size:6.5pt; }
+  .footer-right { color:#A0D8CE; font-family:'Space Mono',monospace; font-size:7.5pt; }
 
   /* === Page 2 styles === */
 400;500;700;900&family=Space+Mono:wght@400;700&display=swap');
@@ -853,24 +853,10 @@
   @media print {
     body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   }
-
-  .page-a4-wrapper {
-    width: 210mm;
-    height: 297mm;
-    overflow: hidden;
-    position: relative;
-  }
-  .page-a4-wrapper .page {
-    transform: scale(1.1538);
-    transform-origin: top left;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
 </style>
 </head>
 <body>
-<div class="page-a4-wrapper"><div class="page">
+<div class="page">
 
   <!-- ヘッダー -->
   <div class="header">
@@ -1143,8 +1129,6 @@
     <span class="footer-left">蔵前工業会科学技術部会</span>
     <span class="footer-right">第51回 科学技術セミナー　2026.10.17</span>
   </div>
-
-</div>
 
 </div>
 
