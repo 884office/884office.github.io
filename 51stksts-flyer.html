@@ -703,6 +703,19 @@
       page-break-after: always;
       break-after: page;
     }
+    .page2-outer {
+      width: 210mm !important;
+      height: 297mm !important;
+      overflow: hidden !important;
+      page-break-before: always;
+      break-before: page;
+      page-break-inside: avoid;
+      break-inside: avoid;
+      position: relative !important;
+      /* Safari: clip-path clips absolutely-positioned children where overflow:hidden may not */
+      -webkit-clip-path: inset(0 0 0 0);
+      clip-path: inset(0 0 0 0);
+    }
     .page2 {
       overflow: visible;
     }
@@ -986,7 +999,7 @@
 
 </div>
 
-<div style="width:210mm;height:297mm;overflow:hidden;page-break-before:always;break-before:page;position:relative;">
+<div class="page2-outer" style="width:210mm;height:297mm;overflow:hidden;page-break-before:always;break-before:page;position:relative;">
 <div class="page2" style="
   display: block;
   width: 309mm;
