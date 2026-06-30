@@ -700,17 +700,15 @@
       width: 210mm;
       height: 297mm;
       overflow: hidden;
-      page-break-after: always;
-      break-after: page;
     }
     .page2 {
       width: 210mm;
-      height: 297mm;
-      overflow: hidden;
+      min-height: 297mm;
       page-break-before: always;
       break-before: page;
-      page-break-after: avoid;
-      break-after: avoid;
+      -webkit-break-before: page;
+      page-break-inside: avoid;
+      break-inside: avoid;
     }
   }
 </style>
@@ -1001,8 +999,6 @@
   background: #fff;
   font-family: 'Noto Sans JP', sans-serif;
   color: #1a2a5e;
-  page-break-before: always;
-  break-before: page;
 ">
 
   <!-- ページヘッダー -->
